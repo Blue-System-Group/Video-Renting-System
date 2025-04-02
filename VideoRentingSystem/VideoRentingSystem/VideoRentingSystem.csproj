@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataStructures\CustomerList.cs" />
+    <Compile Include="DataStructures\RentalHashTable.cs" />
     <Compile Include="Data\DataAccess.cs" />
     <Compile Include="Data\DbConnection.cs" />
     <Compile Include="Models\Customer.cs" />
