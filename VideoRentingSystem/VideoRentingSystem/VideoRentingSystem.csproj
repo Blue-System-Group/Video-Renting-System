@@ -48,6 +48,10 @@
   <ItemGroup>
     <Compile Include="DataStructures\CustomerList.cs" />
     <Compile Include="DataStructures\RentalHashTable.cs" />
+<<<<<<< HEAD
+    <Compile Include="DataStructures\VideoBST.cs" />
+=======
+>>>>>>> b5ec81f5d2fdcd3a40768683e5abe2ffdd2a565c
     <Compile Include="Data\DataAccess.cs" />
     <Compile Include="Data\DbConnection.cs" />
     <Compile Include="Models\Customer.cs" />
