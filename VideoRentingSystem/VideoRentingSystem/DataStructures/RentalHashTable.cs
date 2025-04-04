@@ -1,4 +1,5 @@
-﻿using VideoRentingSystem.Models;
+﻿using System;
+using VideoRentingSystem.Models;
 
 namespace VideoRentingSystem.DataStructures
 {
@@ -31,7 +32,7 @@ namespace VideoRentingSystem.DataStructures
         {
             return rentalID % size;
         }
-
+        // add rental to the hash table
         public void AddRental(Rental rental)
         {
             int newRentalID = GetNextRentalID();
@@ -48,6 +49,7 @@ namespace VideoRentingSystem.DataStructures
             table[index] = newEntry;
         }
 
+        //get next rental ID
         private int GetNextRentalID()
         {
             int maxID = 0;
@@ -66,6 +68,22 @@ namespace VideoRentingSystem.DataStructures
             }
 
             return maxID + 1;
+        }
+        // return rental by rental ID
+        public void ReturnVideo(int rentalID)
+        {
+            int index = Hash(rentalID);
+            RentalEntry entry = table[index];
+            while (entry != null)
+            {
+                if (entry.RentalID == rentalID)
+                {
+                    entry.Data.Status = "Returned";
+                    entry.Data.ReturnDate = DateTime.Now;
+                    break;
+                }
+                entry = entry.Next;
+            }
         }
     }
 }
