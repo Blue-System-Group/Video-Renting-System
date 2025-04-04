@@ -3,13 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem\\datastructures\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem\\datastructures\\customerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-=======
       "AbsoluteMoniker": "D:0:0:{F7EC6B6C-E9DF-4942-9C3E-04D40F8CA76F}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7EC6B6C-E9DF-4942-9C3E-04D40F8CA76F}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|solutionrelative:videorentingsystem.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,7 +12,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\datastructures\\customerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
->>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\customerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -67,8 +59,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< Updated upstream
-=======
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\UnitTest1.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem.Tests\\UnitTest1.cs",
@@ -82,22 +72,11 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
->>>>>>> Stashed changes
               "Title": "UserList.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\UserList.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\UserList.cs",
               "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\UserList.cs",
               "RelativeToolTip": "VideoRentingSystem\\DataStructures\\UserList.cs",
-<<<<<<< Updated upstream
-              "ViewState": "AgIAAAcAAAAAAAAAAAAswCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T17:44:35.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-=======
               "ViewState": "AgIAAAgAAAAAAAAAAAAUwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T17:44:35.27Z"
@@ -105,7 +84,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
->>>>>>> Stashed changes
               "Title": "VideoBST.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\VideoBST.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\VideoBST.cs",
@@ -117,11 +95,7 @@
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 3,
-=======
               "DocumentIndex": 4,
->>>>>>> Stashed changes
               "Title": "RentalHashTable.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\RentalHashTable.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\RentalHashTable.cs",
@@ -133,11 +107,7 @@
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 4,
-=======
               "DocumentIndex": 5,
->>>>>>> Stashed changes
               "Title": "Rental.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Models\\Rental.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\Models\\Rental.cs",
@@ -149,11 +119,7 @@
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 5,
-=======
               "DocumentIndex": 6,
->>>>>>> Stashed changes
               "Title": "Video.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Models\\Video.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\Models\\Video.cs",
@@ -165,11 +131,7 @@
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 1,
-=======
               "DocumentIndex": 2,
->>>>>>> Stashed changes
               "Title": "CustomerList.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\CustomerList.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\CustomerList.cs",
@@ -177,12 +139,7 @@
               "RelativeToolTip": "VideoRentingSystem\\DataStructures\\CustomerList.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAA0wCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
-              "WhenOpened": "2025-04-02T15:12:00.24Z",
-              "EditorCaption": ""
-=======
               "WhenOpened": "2025-04-02T15:12:00.24Z"
->>>>>>> Stashed changes
             }
           ]
         }

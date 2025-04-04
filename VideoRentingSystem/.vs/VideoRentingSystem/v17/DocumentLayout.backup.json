@@ -3,8 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-=======
       "AbsoluteMoniker": "D:0:0:{F7EC6B6C-E9DF-4942-9C3E-04D40F8CA76F}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7EC6B6C-E9DF-4942-9C3E-04D40F8CA76F}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|solutionrelative:videorentingsystem.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,16 +11,11 @@
       "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
->>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\datastructures\\customerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\customerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem\\datastructures\\videobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-=======
       "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\datastructures\\videobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
->>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\videobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -45,11 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< Updated upstream
-          "SelectedChildIndex": 8,
-=======
           "SelectedChildIndex": 4,
->>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Bookmark",
@@ -69,9 +58,6 @@
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 1,
-=======
               "DocumentIndex": 0,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\UnitTest1.cs",
@@ -99,7 +85,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
->>>>>>> Stashed changes
               "Title": "VideoBST.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\VideoBST.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\VideoBST.cs",
@@ -107,20 +92,11 @@
               "RelativeToolTip": "VideoRentingSystem\\DataStructures\\VideoBST.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAuwDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
-              "WhenOpened": "2025-04-03T16:25:44.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-=======
               "WhenOpened": "2025-04-03T16:25:44.879Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
->>>>>>> Stashed changes
               "Title": "RentalHashTable.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\RentalHashTable.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\RentalHashTable.cs",
@@ -132,11 +108,7 @@
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 3,
-=======
               "DocumentIndex": 5,
->>>>>>> Stashed changes
               "Title": "Rental.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Models\\Rental.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\Models\\Rental.cs",
@@ -148,11 +120,7 @@
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 4,
-=======
               "DocumentIndex": 6,
->>>>>>> Stashed changes
               "Title": "Video.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Models\\Video.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\Models\\Video.cs",
@@ -164,26 +132,15 @@
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 0,
-=======
               "DocumentIndex": 2,
->>>>>>> Stashed changes
               "Title": "CustomerList.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\CustomerList.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\CustomerList.cs",
               "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\CustomerList.cs",
               "RelativeToolTip": "VideoRentingSystem\\DataStructures\\CustomerList.cs",
-<<<<<<< Updated upstream
-              "ViewState": "AgIAABUAAAAAAAAAAAAcwCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T15:12:00.24Z",
-              "EditorCaption": ""
-=======
               "ViewState": "AgIAABUAAAAAAAAAAAA0wCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T15:12:00.24Z"
->>>>>>> Stashed changes
             }
           ]
         }
