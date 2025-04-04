@@ -19,6 +19,7 @@ namespace VideoRentingSystem.DataStructures
         }
     }
 
+    /// Linked List to store customers
     public class CustomerList
     {
         private CustomerNode head;
@@ -33,4 +34,28 @@ namespace VideoRentingSystem.DataStructures
         }
 
     }
-}
+
+    /// Method to display customers sorted by CustomerID
+    public void DisplayCustomers()
+        {
+            List<Customer> customers = new List<Customer>();
+            CustomerNode current = head;
+
+            // Collect customers in a list
+            while (current != null)
+            {
+                customers.Add(current.Data);
+                current = current.Next;
+            }
+
+            // Sort by CustomerID
+            customers.Sort((a, b) => a.CustomerID.CompareTo(b.CustomerID));
+
+            // Display sorted customers
+            Console.WriteLine("Customers:");
+            foreach (var customer in customers)
+            {
+                Console.WriteLine($"Customer ID: {customer.CustomerID} | Name: {customer.Name} | Contact: {customer.Contact}");
+            }
+        }
+    }
