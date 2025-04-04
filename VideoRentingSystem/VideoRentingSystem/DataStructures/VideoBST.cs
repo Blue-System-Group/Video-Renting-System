@@ -35,6 +35,7 @@ namespace VideoRentingSystem.DataStructures
             _root = InsertRec(_root, video);
         }
 
+        // Insert a new video recursively
         private VideoNode InsertRec(VideoNode root, Video video)
         {
             if (root == null)
@@ -45,6 +46,32 @@ namespace VideoRentingSystem.DataStructures
             else if (video.ID > root.Video.ID)
                 root.Right = InsertRec(root.Right, video);
 
+            return root;
+        }
+
+        // Update a video
+        public VideoNode Update(int videoId, Video video)
+        {
+            VideoNode updatedNode = null;
+            _root = UpdateRec(_root, videoId, video, ref updatedNode);
+            return updatedNode;
+        }
+
+        // Update a video recursively
+        private VideoNode UpdateRec(VideoNode root, int videoId, Video video, ref VideoNode updatedNode)
+        {
+            if (root == null)
+                return null;  // Video not found
+            if (videoId < root.Video.ID)
+                root.Left = UpdateRec(root.Left, videoId, video, ref updatedNode);
+            else if (videoId > root.Video.ID)
+                root.Right = UpdateRec(root.Right, videoId, video, ref updatedNode);
+            else
+            {
+                // Found the video
+                root.Video = video;
+                updatedNode = root;
+            }
             return root;
         }
     }
