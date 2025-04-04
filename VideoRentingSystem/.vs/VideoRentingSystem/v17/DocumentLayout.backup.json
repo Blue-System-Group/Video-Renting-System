@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F7EC6B6C-E9DF-4942-9C3E-04D40F8CA76F}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7EC6B6C-E9DF-4942-9C3E-04D40F8CA76F}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|solutionrelative:videorentingsystem.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\datastructures\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\datastructures\\customerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\customerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\datastructures\\videobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\videobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\datastructures\\rentalhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\rentalhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\models\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\models\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\models\\video.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\models\\video.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "VideoRentingSystem.Tests\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "VideoRentingSystem.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T18:02:20.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserList.cs",
+              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\UserList.cs",
+              "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\UserList.cs",
+              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\UserList.cs",
+              "RelativeToolTip": "VideoRentingSystem\\DataStructures\\UserList.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T17:44:35.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VideoBST.cs",
+              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\VideoBST.cs",
+              "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\VideoBST.cs",
+              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\VideoBST.cs",
+              "RelativeToolTip": "VideoRentingSystem\\DataStructures\\VideoBST.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAuwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T16:25:44.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RentalHashTable.cs",
+              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\RentalHashTable.cs",
+              "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\RentalHashTable.cs",
+              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\RentalHashTable.cs",
+              "RelativeToolTip": "VideoRentingSystem\\DataStructures\\RentalHashTable.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T15:31:36.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Rental.cs",
+              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Models\\Rental.cs",
+              "RelativeDocumentMoniker": "VideoRentingSystem\\Models\\Rental.cs",
+              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Models\\Rental.cs",
+              "RelativeToolTip": "VideoRentingSystem\\Models\\Rental.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T15:28:06.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Video.cs",
+              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Models\\Video.cs",
+              "RelativeDocumentMoniker": "VideoRentingSystem\\Models\\Video.cs",
+              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Models\\Video.cs",
+              "RelativeToolTip": "VideoRentingSystem\\Models\\Video.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T15:18:26.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerList.cs",
+              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\CustomerList.cs",
+              "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\CustomerList.cs",
+              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\CustomerList.cs",
+              "RelativeToolTip": "VideoRentingSystem\\DataStructures\\CustomerList.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA0wCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T15:12:00.24Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
