@@ -111,5 +111,12 @@ namespace VideoRentingSystem.DataStructures
 
             return root;
         }
+
+        private Video MinValue(VideoNode root)
+        {
+            while (root.Left != null)
+                root = root.Left;
+            return root.Video;
+        }
     }
 }
