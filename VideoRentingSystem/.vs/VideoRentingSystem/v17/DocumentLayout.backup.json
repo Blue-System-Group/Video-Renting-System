@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\datastructures\\customerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem\\datastructures\\customerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\customerlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem\\datastructures\\videobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\datastructures\\videobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\videobst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\datastructures\\rentalhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\datastructures\\rentalhashtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7EC6B6C-E9DF-4942-9C3E-04D40F8CA76F}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7EC6B6C-E9DF-4942-9C3E-04D40F8CA76F}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|solutionrelative:videorentingsystem.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\datastructures\\userlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,18 +55,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "VideoRentingSystem.Tests\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\UnitTest1.cs",
-              "RelativeToolTip": "VideoRentingSystem.Tests\\UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T18:02:20.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "UserList.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\UserList.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\UserList.cs",
@@ -90,8 +74,7 @@
               "RelativeToolTip": "VideoRentingSystem\\DataStructures\\VideoBST.cs",
               "ViewState": "AgIAAGgAAAAAAAAAAADwv3cAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T16:25:44.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T16:25:44.879Z"
             },
             {
               "$type": "Document",
@@ -107,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Rental.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Models\\Rental.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\Models\\Rental.cs",
@@ -119,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Video.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Models\\Video.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\Models\\Video.cs",
@@ -137,7 +120,7 @@
               "RelativeDocumentMoniker": "VideoRentingSystem\\DataStructures\\CustomerList.cs",
               "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\DataStructures\\CustomerList.cs",
               "RelativeToolTip": "VideoRentingSystem\\DataStructures\\CustomerList.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAAADsAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAADsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T15:12:00.24Z",
               "EditorCaption": ""
