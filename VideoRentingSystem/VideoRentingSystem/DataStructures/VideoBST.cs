@@ -74,5 +74,42 @@ namespace VideoRentingSystem.DataStructures
             }
             return root;
         }
+
+        // Delete a video
+        public bool Delete(int videoId)
+        {
+            bool isDeleted = false;
+            _root = DeleteRec(_root, videoId, ref isDeleted);
+            return isDeleted;
+        }
+
+        // Delete a video recursively
+        private VideoNode DeleteRec(VideoNode root, int videoId, ref bool isDeleted)
+        {
+            if (root == null)
+                return null;  // Video not found
+
+            if (videoId < root.Video.ID)
+                root.Left = DeleteRec(root.Left, videoId, ref isDeleted);
+            else if (videoId > root.Video.ID)
+                root.Right = DeleteRec(root.Right, videoId, ref isDeleted);
+            else
+            {
+                // Found the video
+                isDeleted = true;
+
+                // Node with only one child or no child
+                if (root.Left == null)
+                    return root.Right;
+                if (root.Right == null)
+                    return root.Left;
+
+                // Node with two children
+                root.Video = MinValue(root.Right);
+                root.Right = DeleteRec(root.Right, root.Video.ID, ref isDeleted);
+            }
+
+            return root;
+        }
     }
 }
