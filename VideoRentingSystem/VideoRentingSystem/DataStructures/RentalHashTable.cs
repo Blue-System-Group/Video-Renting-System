@@ -85,5 +85,20 @@ namespace VideoRentingSystem.DataStructures
                 entry = entry.Next;
             }
         }
+
+        // get rental by rental ID
+        public Rental GetRental(int rentalID)
+        {
+            int index = Hash(rentalID);
+            RentalEntry entry = table[index];
+
+            while (entry != null)
+            {
+                if (entry.RentalID == rentalID)
+                    return entry.Data;
+                entry = entry.Next;
+            }
+            return null;
+        }
     }
 }
