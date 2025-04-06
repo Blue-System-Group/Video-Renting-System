@@ -100,5 +100,21 @@ namespace VideoRentingSystem.DataStructures
             }
             return null;
         }
+
+        // get all rentals
+        public Rental Display()
+        {
+            Console.WriteLine("Rentals:");
+            for (int i = 0; i < size; i++)
+            {
+                RentalEntry entry = table[i];
+                while (entry != null)
+                {
+                    Console.WriteLine($"Rental ID: {entry.RentalID}, Customer ID: {entry.Data.CustomerID}, Video ID: {entry.Data.VideoID}, Rent Date: {entry.Data.RentDate}, Return Date: {entry.Data.ReturnDate}, Status: {entry.Data.Status}");
+                    entry = entry.Next;
+                }
+            }
+            return null;
+        }
     }
 }
