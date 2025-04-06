@@ -31,7 +31,11 @@
         "frameworks": {
           "net472": {
             "targetAlias": "net472",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\VideoRentingSystem.csproj": {
+                "projectPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\VideoRentingSystem.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -74,6 +78,22 @@
         "win-x86": {
           "#import": []
         }
+      }
+    },
+    "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\VideoRentingSystem.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\VideoRentingSystem.csproj",
+        "projectName": "VideoRentingSystem",
+        "projectPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\VideoRentingSystem.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

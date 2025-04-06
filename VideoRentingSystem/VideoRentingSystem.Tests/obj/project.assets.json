@@ -1014,6 +1014,15 @@
             "rid": "win"
           }
         }
+      },
+      "VideoRentingSystem/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/VideoRentingSystem.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VideoRentingSystem.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
@@ -1861,6 +1870,15 @@
         },
         "runtime": {
           "runtimes/win/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll": {}
+        }
+      },
+      "VideoRentingSystem/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/VideoRentingSystem.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VideoRentingSystem.dll": {}
         }
       }
     }
@@ -3266,6 +3284,11 @@
         "system.runtime.interopservices.runtimeinformation.4.0.0.nupkg.sha512",
         "system.runtime.interopservices.runtimeinformation.nuspec"
       ]
+    },
+    "VideoRentingSystem/1.0.0": {
+      "type": "project",
+      "path": "../VideoRentingSystem/VideoRentingSystem.csproj",
+      "msbuildProject": "../VideoRentingSystem/VideoRentingSystem.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3273,7 +3296,8 @@
       "MSTest >= 3.6.1",
       "Microsoft.NET.Test.Sdk >= 17.11.1",
       "Microsoft.Testing.Extensions.CodeCoverage >= 17.12.6",
-      "Microsoft.Testing.Extensions.TrxReport >= 1.4.0"
+      "Microsoft.Testing.Extensions.TrxReport >= 1.4.0",
+      "VideoRentingSystem >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3307,7 +3331,11 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\VideoRentingSystem.csproj": {
+              "projectPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\VideoRentingSystem.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
