@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using VideoRentingSystem.DataStructures;
+using VideoRentingSystem.Models;
 
 namespace VideoRentingSystem.Tests
 {
-    internal class CustomerListTests
+    [TestClass]
+    public class CustomerListTests
     {
+        private CustomerList customerList;
+        private Customer testCustomer1;
+        private Customer testCustomer2;
+        private Customer testCustomer3;
     }
 }

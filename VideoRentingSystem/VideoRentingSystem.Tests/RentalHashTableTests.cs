@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using VideoRentingSystem.DataStructures;
+using VideoRentingSystem.Models;
 
 namespace VideoRentingSystem.Tests
 {
-    internal class RentalHashTableTests
+    [TestClass]
+    public class RentalHashTableTests
     {
+        private RentalHashTable rentalTable;
+        private Rental rental1;
+        private Rental rental2;
+        private Rental rental3;
+
     }
 }

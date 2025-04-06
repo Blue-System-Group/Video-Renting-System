@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using VideoRentingSystem.DataStructures;
+using VideoRentingSystem.Models;
 
 namespace VideoRentingSystem.Tests
 {
-    internal class VideoBSTTests
+    [TestClass]
+    public class VideoBSTTests
     {
+        private VideoBST videoBST;
+        private Video video1;
+        private Video video2;
+        private Video video3;
+        private Video video4;
     }
 }
