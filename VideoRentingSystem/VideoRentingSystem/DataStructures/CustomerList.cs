@@ -73,5 +73,22 @@ namespace VideoRentingSystem.DataStructures
             }
             Console.WriteLine("Customer not found.");
         }
+
+        /// Method to search for a customer by ID
+        public void SearchCustomer(int id)
+        {
+            CustomerNode current = head;
+            Console.WriteLine("Searching for customer with ID: " + id);
+            while (current != null)
+            {
+                if (current.Data.CustomerID == id)
+                {
+                    Console.WriteLine($"Customer ID: {current.Data.CustomerID} | Name: {current.Data.Name} | Contact: {current.Data.Contact}");
+                    return;
+                }
+                current = current.Next;
+            }
+            Console.WriteLine("Customer not found.");
+        }
     }
 }
