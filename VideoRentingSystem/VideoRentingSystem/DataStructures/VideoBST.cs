@@ -118,5 +118,40 @@ namespace VideoRentingSystem.DataStructures
                 root = root.Left;
             return root.Video;
         }
+
+        // Search for a video
+        public Video Search(int videoId)
+        {
+            VideoNode resultNode = SearchRec(_root, videoId);
+            if (resultNode != null)
+            {
+                Console.WriteLine("Video Found: ID = " + resultNode.Video.ID
+                                + ", Title = " + resultNode.Video.Title
+                                + ", Genre = " + resultNode.Video.Genre
+                                + ", Release Date = " + resultNode.Video.ReleaseDate
+                                + ", Availability = " + resultNode.Video.Availability);
+                return resultNode.Video;
+            }
+            else
+            {
+                Console.WriteLine("Video with ID " + videoId + " not found.");
+                return null;
+            }
+        }
+
+        // Search for a video recursively
+        private VideoNode SearchRec(VideoNode root, int videoId)
+        {
+            if (root == null)
+                return null;
+
+            if (videoId == root.Video.ID)
+                return root;
+
+            if (videoId < root.Video.ID)
+                return SearchRec(root.Left, videoId);
+
+            return SearchRec(root.Right, videoId);
+        }
     }
 }
