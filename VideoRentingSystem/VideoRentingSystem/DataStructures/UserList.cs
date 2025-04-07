@@ -23,11 +23,13 @@ namespace VideoRentingSystem.DataStructures
         private UserNode head;
         public UserList() { }
 
+        // method to clear the list
         public void Clear()
         {
             head = null;
         }
 
+        // method to add a user to the list
         public void AddUser(User user)
         {
             UserNode newNode = new UserNode(user);
