@@ -23,8 +23,24 @@ namespace VideoRentingSystem.DataStructures
 
     public class VideoBST
     {
+        // Singleton instance
+        private static readonly VideoBST instance = new VideoBST();
         private VideoNode _root;
+
+        // Private constructor to prevent instantiationS
         public VideoBST()
+        {
+            _root = null;
+        }
+
+        // instance to access the singleton
+        public static VideoBST Instance
+        {
+            get { return instance; }
+        }
+
+        // Clear the tree
+        public void Clear()
         {
             _root = null;
         }
@@ -35,7 +51,8 @@ namespace VideoRentingSystem.DataStructures
             _root = InsertRec(_root, video);
         }
 
-        // Insert a new video recursively
+
+        // Recursive insert function
         private VideoNode InsertRec(VideoNode root, Video video)
         {
             if (root == null)
@@ -57,7 +74,7 @@ namespace VideoRentingSystem.DataStructures
             return updatedNode;
         }
 
-        // Update a video recursively
+        // Recursive update function
         private VideoNode UpdateRec(VideoNode root, int videoId, Video video, ref VideoNode updatedNode)
         {
             if (root == null)
@@ -83,7 +100,7 @@ namespace VideoRentingSystem.DataStructures
             return isDeleted;
         }
 
-        // Delete a video recursively
+        // Recursive delete function
         private VideoNode DeleteRec(VideoNode root, int videoId, ref bool isDeleted)
         {
             if (root == null)
@@ -112,6 +129,7 @@ namespace VideoRentingSystem.DataStructures
             return root;
         }
 
+        // Find the minimum value node
         private Video MinValue(VideoNode root)
         {
             while (root.Left != null)
@@ -139,6 +157,12 @@ namespace VideoRentingSystem.DataStructures
             }
         }
 
+        //display all videos
+        public void DisplayAllVideos()
+        {
+            InOrderTraversal(video => Console.WriteLine("VideoID :" + video.ID + " |Title :" + video.Title + " |Genre :" + video.Genre + " |Release Date :" + video.ReleaseDate + " |Availability :" + video.Availability));
+        }
+
         // Search for a video recursively
         private VideoNode SearchRec(VideoNode root, int videoId)
         {
@@ -152,6 +176,23 @@ namespace VideoRentingSystem.DataStructures
                 return SearchRec(root.Left, videoId);
 
             return SearchRec(root.Right, videoId);
+        }
+
+        // Display all videos
+        public void InOrderTraversal(Action<Video> action)
+        {
+            InOrderTraversalRec(_root, action);
+        }
+
+        // In-order traversal of the tree
+        private void InOrderTraversalRec(VideoNode root, Action<Video> action)
+        {
+            if (root != null)
+            {
+                InOrderTraversalRec(root.Left, action);
+                action(root.Video);
+                InOrderTraversalRec(root.Right, action);
+            }
         }
     }
 }
