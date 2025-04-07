@@ -57,5 +57,20 @@ namespace VideoRentingSystem.DataStructures
                 Console.WriteLine($"User ID: {user.UserID} | Username: {user.Username} | Role: {user.Role}");
             }
         }
+
+        // method to get a user by username
+        public User GetUser(string username)
+        {
+            UserNode current = head;
+            while (current != null)
+            {
+                if (current.Data.Username == username)
+                {
+                    return current.Data;
+                }
+                current = current.Next;
+            }
+            return null;
+        }
     }
 }
