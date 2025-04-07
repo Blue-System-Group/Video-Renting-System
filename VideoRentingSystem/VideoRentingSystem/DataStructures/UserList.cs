@@ -36,5 +36,26 @@ namespace VideoRentingSystem.DataStructures
             newNode.Next = head;
             head = newNode;
         }
+
+        //method to display all users in the list
+        public void DisplayUsers()
+        {
+            List<User> users = new List<User>();
+            UserNode current = head;
+            // Collect users in a list
+            while (current != null)
+            {
+                users.Add(current.Data);
+                current = current.Next;
+            }
+            // Sort by UserID
+            users.Sort((a, b) => a.UserID.CompareTo(b.UserID));
+            // Display sorted users
+            Console.WriteLine("Users:");
+            foreach (var user in users)
+            {
+                Console.WriteLine($"User ID: {user.UserID} | Username: {user.Username} | Role: {user.Role}");
+            }
+        }
     }
 }
