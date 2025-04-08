@@ -3307,11 +3307,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nimes\\Documents\\GitHub\\sec\\VideoRentingSystem\\VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj",
       "projectName": "VideoRentingSystem.Tests",
-      "projectPath": "C:\\Users\\nimes\\Documents\\GitHub\\sec\\VideoRentingSystem\\VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj",
+      "projectPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj",
       "packagesPath": "C:\\Users\\nimes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nimes\\Documents\\GitHub\\sec\\VideoRentingSystem\\VideoRentingSystem.Tests\\obj\\",
+      "outputPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3332,8 +3332,8 @@
         "net472": {
           "targetAlias": "net472",
           "projectReferences": {
-            "C:\\Users\\nimes\\Documents\\GitHub\\sec\\VideoRentingSystem\\VideoRentingSystem\\VideoRentingSystem.csproj": {
-              "projectPath": "C:\\Users\\nimes\\Documents\\GitHub\\sec\\VideoRentingSystem\\VideoRentingSystem\\VideoRentingSystem.csproj"
+            "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\VideoRentingSystem.csproj": {
+              "projectPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\VideoRentingSystem.csproj"
             }
           }
         }

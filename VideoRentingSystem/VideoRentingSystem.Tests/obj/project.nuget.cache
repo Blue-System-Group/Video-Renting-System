@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AlH3wpV64Vk=",
+  "dgSpecHash": "HZDR393XpyY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nimes\\Documents\\GitHub\\sec\\VideoRentingSystem\\VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj",
+  "projectFilePath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nimes\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",
     "C:\\Users\\nimes\\.nuget\\packages\\microsoft.codecoverage\\17.11.1\\microsoft.codecoverage.17.11.1.nupkg.sha512",
