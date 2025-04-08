@@ -19,6 +19,8 @@ namespace VideoRentingSystem.DataStructures
             }
         }
 
+        // Singleton pattern to ensure only one instance of RentalHashTable exists
+        private static readonly RentalHashTable instance = new RentalHashTable();
         private RentalEntry[] table;
         private int size;
 
@@ -28,10 +30,25 @@ namespace VideoRentingSystem.DataStructures
             table = new RentalEntry[size];
         }
 
+        // Singleton pattern to ensure only one instance of RentalHashTable exists
+        public static RentalHashTable Instance
+        {
+            get { return instance; }
+        }
+
+
+        //method to hash rental ID
         private int Hash(int rentalID)
         {
             return rentalID % size;
         }
+
+        // method to clear the hash table
+        public void Clear()
+        {
+            table = new RentalEntry[size];
+        }
+
         // add rental to the hash table
         public void AddRental(Rental rental)
         {
@@ -111,6 +128,112 @@ namespace VideoRentingSystem.DataStructures
                 while (entry != null)
                 {
                     Console.WriteLine($"Rental ID: {entry.RentalID}, Customer ID: {entry.Data.CustomerID}, Video ID: {entry.Data.VideoID}, Rent Date: {entry.Data.RentDate}, Return Date: {entry.Data.ReturnDate}, Status: {entry.Data.Status}");
+                    entry = entry.Next;
+                }
+            }
+            return null;
+        }
+
+        // get rentals yet to return
+        public Rental DisplayYetToReturn()
+        {
+            Console.WriteLine("Rentals yet to return:");
+            for (int i = 0; i < size; i++)
+            {
+                RentalEntry entry = table[i];
+                while (entry != null)
+                {
+                    if (entry.Data.Status == "Rented")
+                    {
+                        Console.WriteLine($"Rental ID: {entry.RentalID}, Customer ID: {entry.Data.CustomerID}, Video ID: {entry.Data.VideoID}, Rent Date: {entry.Data.RentDate}, Return Date: {entry.Data.ReturnDate}, Status: {entry.Data.Status}");
+                    }
+                    entry = entry.Next;
+                }
+            }
+            return null;
+        }
+
+        // count rentals
+        public int Count()
+        {
+            int count = 0;
+            for (int i = 0; i < size; i++)
+            {
+                RentalEntry entry = table[i];
+                while (entry != null)
+                {
+                    count++;
+                    entry = entry.Next;
+                }
+            }
+            return count;
+        }
+
+        // count rentals yet to return
+        public int CountYetToReturn()
+        {
+            int count = 0;
+            for (int i = 0; i < size; i++)
+            {
+                RentalEntry entry = table[i];
+                while (entry != null)
+                {
+                    if (entry.Data.Status == "Rented")
+                        count++;
+                    entry = entry.Next;
+                }
+            }
+            return count;
+        }
+
+        //  count rentals yet to return by customer ID
+        public int CountYetToReturn(int customerID)
+        {
+            int count = 0;
+            for (int i = 0; i < size; i++)
+            {
+                RentalEntry entry = table[i];
+                while (entry != null)
+                {
+                    if (entry.Data.CustomerID == customerID && entry.Data.Status == "Rented")
+                        count++;
+                    entry = entry.Next;
+                }
+            }
+            return count;
+        }
+        // get rentals by customer ID
+        public Rental DisplayCustomerRentals(int customerID)
+        {
+            Console.WriteLine($"Rentals for Customer ID {customerID}:");
+            for (int i = 0; i < size; i++)
+            {
+                RentalEntry entry = table[i];
+                while (entry != null)
+                {
+                    if (entry.Data.CustomerID == customerID)
+                    {
+                        Console.WriteLine($"Rental ID: {entry.RentalID}, Customer ID: {entry.Data.CustomerID}, Video ID: {entry.Data.VideoID}, Rent Date: {entry.Data.RentDate}, Return Date: {entry.Data.ReturnDate}, Status: {entry.Data.Status}");
+                    }
+                    entry = entry.Next;
+                }
+            }
+            return null;
+        }
+
+        // get rentals yet to return by customer ID
+        public Rental DisplayCustomerYetToReturn(int customerID)
+        {
+            Console.WriteLine($"Rentals yet to return for Customer ID {customerID}:");
+            for (int i = 0; i < size; i++)
+            {
+                RentalEntry entry = table[i];
+                while (entry != null)
+                {
+                    if (entry.Data.CustomerID == customerID && entry.Data.Status == "Rented")
+                    {
+                        Console.WriteLine($"Rental ID: {entry.RentalID}, Customer ID: {entry.Data.CustomerID}, Video ID: {entry.Data.VideoID}, Rent Date: {entry.Data.RentDate}, Return Date: {entry.Data.ReturnDate}, Status: {entry.Data.Status}");
+                    }
                     entry = entry.Next;
                 }
             }
