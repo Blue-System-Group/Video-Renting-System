@@ -1,6 +1,6 @@
 ﻿namespace VideoRentingSystem.Services
 {
-    public class VideoService
+    public class RentalService
     {
     }
 }
