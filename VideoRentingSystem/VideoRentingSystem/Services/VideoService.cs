@@ -38,5 +38,23 @@ namespace VideoRentingSystem.Services
             }
             //Console.WriteLine("Data loaded successfully!");
         }
+
+        // method to add a new video to the BST and database.
+        public void AddVideo(Video video)
+        {
+            // Add video to the BST
+            _videoTree.Insert(video);
+
+            // Insert video record into the database
+            string query = "INSERT INTO Videos (Title, Genre,ReleaseDate, Availability) VALUES (@Title, @Genre,@ReleaseDate, 1)";
+            _dataAccess.ExecuteQuery(query, cmd =>
+            {
+                cmd.Parameters.AddWithValue("@Title", video.Title);
+                cmd.Parameters.AddWithValue("@Genre", video.Genre);
+                cmd.Parameters.AddWithValue("@ReleaseDate", video.ReleaseDate);
+            });
+
+            Console.WriteLine("Video added successfully!");
+        }
     }
 }
