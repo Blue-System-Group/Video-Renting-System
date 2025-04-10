@@ -36,5 +36,17 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.AreSame(instance1, instance2, "Instance should return the same object");
         }
+        /// <summary>
+        /// Tests that the 'AddCustomer' method correctly adds a customer to the list.
+        /// </summary>
+        [TestMethod]
+        public void AddCustomer_ShouldAddCustomerToTheList()
+        {
+            // Act
+            customerList.AddCustomer(testCustomer1);
+
+            // Assert
+            Assert.AreEqual(1, customerList.Count, "Count should be 1 after adding a customer");
+        }
     }
 }
