@@ -48,5 +48,20 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.AreEqual(1, customerList.Count, "Count should be 1 after adding a customer");
         }
+
+        /// <summary>
+        /// Tests that the 'AddCustomer' method correctly adds multiple customers to the list.
+        /// </summary>
+        [TestMethod]
+        public void AddCustomer_ShouldAddMultipleCustomers()
+        {
+            // Act
+            customerList.AddCustomer(testCustomer1);
+            customerList.AddCustomer(testCustomer2);
+            customerList.AddCustomer(testCustomer3);
+
+            // Assert
+            Assert.AreEqual(3, customerList.Count, "Count should be 3 after adding three customers");
+        }
     }
 }
