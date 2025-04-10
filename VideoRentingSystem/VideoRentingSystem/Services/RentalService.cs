@@ -40,5 +40,45 @@ namespace VideoRentingSystem.Services
             }
             //Console.WriteLine("Data loaded successfully!");
         }
+
+
+        // method to rent a video by customer ID and video ID
+        public void RentVideo(int customerId, int videoId)
+        {
+            // Check if the video is available
+            string checkQuery = $"SELECT Availability FROM Videos WHERE VideoID = {videoId}";
+            var result = _dataAccess.GetData(checkQuery);
+
+            if (result.Rows.Count == 0 || !(bool)result.Rows[0]["Availability"])
+            {
+                Console.WriteLine("Video is not available for rent.");
+                return;
+            }
+
+            // Insert rental record into the database
+            string rentQuery = "INSERT INTO Rentals (CustomerID, VideoID, RentalDate, ReturnDate,Status) " +
+                               "VALUES (@CustomerID, @VideoID, @RentDate, NULL,'Rented'); " +
+                               "UPDATE Videos SET Availability = 0 WHERE VideoID = @VideoID;";
+            _dataAccess.ExecuteQuery(rentQuery, cmd =>
+            {
+                cmd.Parameters.AddWithValue("@CustomerID", customerId);
+                cmd.Parameters.AddWithValue("@VideoID", videoId);
+                cmd.Parameters.AddWithValue("@RentDate", DateTime.Now);
+            });
+
+            // Add rental to hash table
+            Rental rental = new Rental
+            {
+                RentalID = GenerateRentalID(),
+                CustomerID = customerId,
+                VideoID = videoId,
+                RentDate = DateTime.Now,
+                ReturnDate = null
+            };
+            _rentalTable.AddRental(rental);
+            videoService.UpdateVideoAvailability(videoId, false);
+
+            Console.WriteLine("Video rented successfully!");
+        }
     }
 }
