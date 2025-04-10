@@ -82,5 +82,21 @@ namespace VideoRentingSystem.Tests
             Assert.AreEqual(1, customerList.Count, "Count should be 1 after removing one customer");
         }
 
+        /// <summary>
+        /// Tests that the 'RemoveCustomer' method returns false when trying to remove a non-existing customer.
+        /// </summary>
+        [TestMethod]
+        public void RemoveCustomer_ShouldReturnFalseForNonExistingCustomer()
+        {
+            // Arrange
+            customerList.AddCustomer(testCustomer1);
+
+            // Act
+            bool result = customerList.RemoveCustomer(999); // Non-existing ID
+
+            // Assert
+            Assert.IsFalse(result, "Remove should return false for non-existing customer");
+            Assert.AreEqual(1, customerList.Count, "Count should remain 1");
+        }
     }
 }
