@@ -156,5 +156,19 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.AreEqual(0, customerList.Count, "Count should be 0 for empty list");
         }
+
+        /// <summary>
+        /// Tests that the 'Count' should return the correct number of customers in the list.
+        /// </summary>
+        [TestMethod]
+        public void Count_ShouldReturnCorrectCountForNonEmptyList()
+        {
+            // Arrange
+            customerList.AddCustomer(testCustomer1);
+            customerList.AddCustomer(testCustomer2);
+
+            // Assert
+            Assert.AreEqual(2, customerList.Count, "Count should be 2 after adding two customers");
+        }
     }
 }
