@@ -146,5 +146,15 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.IsFalse(result, "Update should return false for non-existing customer");
         }
+
+        /// <summary>
+        /// Tests that the 'Count'should return 0 when the list is empty.
+        /// </summary>
+        [TestMethod]
+        public void Count_ShouldReturnZeroForEmptyList()
+        {
+            // Assert
+            Assert.AreEqual(0, customerList.Count, "Count should be 0 for empty list");
+        }
     }
 }
