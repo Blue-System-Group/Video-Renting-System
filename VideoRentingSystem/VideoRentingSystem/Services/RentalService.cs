@@ -80,5 +80,13 @@ namespace VideoRentingSystem.Services
 
             Console.WriteLine("Video rented successfully!");
         }
+
+        //method to generate rental ID
+        private int GenerateRentalID()
+        {
+            // A simple random generator for Rental ID (for demo purposes)
+            Random random = new Random();
+            return random.Next(1000, 9999);
+        }
     }
 }
