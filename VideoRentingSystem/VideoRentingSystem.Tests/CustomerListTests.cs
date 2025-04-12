@@ -170,5 +170,22 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.AreEqual(2, customerList.Count, "Count should be 2 after adding two customers");
         }
+
+        /// <summary>
+        /// Tests that the 'Clear' method should empty the list.
+        /// </summary>
+        [TestMethod]
+        public void Clear_ShouldEmptyTheList()
+        {
+            // Arrange
+            customerList.AddCustomer(testCustomer1);
+            customerList.AddCustomer(testCustomer2);
+
+            // Act
+            customerList.Clear();
+
+            // Assert
+            Assert.AreEqual(0, customerList.Count, "Count should be 0 after Clear");
+        }
     }
 }
