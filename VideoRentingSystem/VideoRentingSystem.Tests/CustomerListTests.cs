@@ -112,5 +112,23 @@ namespace VideoRentingSystem.Tests
             Assert.IsFalse(result, "Remove should return false for empty list");
             Assert.AreEqual(0, customerList.Count, "Count should remain 0");
         }
+
+        /// <summary>
+        /// Tests that the 'UpdateCustomer' method should update an existing customer.
+        /// </summary>
+        [TestMethod]
+        public void UpdateCustomer_ShouldUpdateExistingCustomer()
+        {
+            // Arrange
+            customerList.AddCustomer(testCustomer1);
+            string newName = "Updated Name";
+            string newContact = "9999999999";
+
+            // Act
+            bool result = customerList.UpdateCustomer(testCustomer1.CustomerID, newName, newContact);
+
+            // Assert
+            Assert.IsTrue(result, "Update should return true for existing customer");
+        }
     }
 }
