@@ -57,6 +57,28 @@ namespace VideoRentingSystem.Services
             Console.WriteLine("Video added successfully!");
         }
 
+        // method to remove a video from the BST and database.
+        public void RemoveVideo(int videoId)
+        {
+            // Remove video from BST
+            bool removed = _videoTree.Delete(videoId);
+
+            if (!removed)
+            {
+                Console.WriteLine("Video not found.");
+                return;
+            }
+
+            // Remove video record from the database
+            string query = "DELETE FROM Videos WHERE VideoID = @ID";
+            _dataAccess.ExecuteQuery(query, cmd =>
+            {
+                cmd.Parameters.AddWithValue("@ID", videoId);
+            });
+
+            Console.WriteLine("Video removed successfully!");
+        }
+
 
         // method to update video availability in the BST and database.
         public void UpdateVideoAvailability(int videoId, bool availability)
