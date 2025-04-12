@@ -130,5 +130,21 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.IsTrue(result, "Update should return true for existing customer");
         }
+
+        /// <summary>
+        /// Tests that the 'UpdateCustomer' method should return false when trying to update a non-existing customer.
+        /// </summary>
+        [TestMethod]
+        public void UpdateCustomer_ShouldReturnFalseForNonExistingCustomer()
+        {
+            // Arrange
+            customerList.AddCustomer(testCustomer1);
+
+            // Act
+            bool result = customerList.UpdateCustomer(999, "New Name", "New Contact");
+
+            // Assert
+            Assert.IsFalse(result, "Update should return false for non-existing customer");
+        }
     }
 }
