@@ -53,5 +53,28 @@ namespace VideoRentingSystem.Services
 
             Console.WriteLine("Customer added successfully!");
         }
+
+
+        // method to remove a customer from the linked list and database
+        public void RemoveCustomer(int customerId)
+        {
+            // Remove customer from the linked list
+            bool removed = _customerList.RemoveCustomer(customerId);
+
+            if (!removed)
+            {
+                Console.WriteLine("Customer not found.");
+                return;
+            }
+
+            // Remove customer record from the database
+            string query = "DELETE FROM Customers WHERE CustomerID = @ID";
+            _dataAccess.ExecuteQuery(query, cmd =>
+            {
+                cmd.Parameters.AddWithValue("@ID", customerId);
+            });
+
+            Console.WriteLine("Customer removed successfully!");
+        }
     }
 }
