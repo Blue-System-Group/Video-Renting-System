@@ -56,5 +56,29 @@ namespace VideoRentingSystem.Services
 
             Console.WriteLine("Video added successfully!");
         }
+
+
+        // method to update video availability in the BST and database.
+        public void UpdateVideoAvailability(int videoId, bool availability)
+        {
+            Video video = _videoTree.Search(videoId);
+            if (video != null)
+            {
+                video.Availability = availability;
+                _videoTree.Update(videoId, video);
+                // Update video availability in the database
+                string query = "UPDATE Videos SET Availability = @Availability WHERE VideoID = @ID";
+                _dataAccess.ExecuteQuery(query, cmd =>
+                {
+                    cmd.Parameters.AddWithValue("@Availability", availability);
+                    cmd.Parameters.AddWithValue("@ID", videoId);
+                });
+                Console.WriteLine("Video availability updated successfully!");
+            }
+            else
+            {
+                Console.WriteLine("Video with ID " + videoId + " not found.");
+            }
+        }
     }
 }
