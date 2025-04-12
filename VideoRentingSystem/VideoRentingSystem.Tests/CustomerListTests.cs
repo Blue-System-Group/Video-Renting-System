@@ -98,5 +98,94 @@ namespace VideoRentingSystem.Tests
             Assert.IsFalse(result, "Remove should return false for non-existing customer");
             Assert.AreEqual(1, customerList.Count, "Count should remain 1");
         }
+
+        /// <summary>
+        /// Tests that the 'RemoveCustomer' method correctly handles the case when the list is empty.
+        /// </summary>
+        [TestMethod]
+        public void RemoveCustomer_ShouldHandleEmptyList()
+        {
+            // Act
+            bool result = customerList.RemoveCustomer(1);
+
+            // Assert
+            Assert.IsFalse(result, "Remove should return false for empty list");
+            Assert.AreEqual(0, customerList.Count, "Count should remain 0");
+        }
+
+        /// <summary>
+        /// Tests that the 'UpdateCustomer' method should update an existing customer.
+        /// </summary>
+        [TestMethod]
+        public void UpdateCustomer_ShouldUpdateExistingCustomer()
+        {
+            // Arrange
+            customerList.AddCustomer(testCustomer1);
+            string newName = "Updated Name";
+            string newContact = "9999999999";
+
+            // Act
+            bool result = customerList.UpdateCustomer(testCustomer1.CustomerID, newName, newContact);
+
+            // Assert
+            Assert.IsTrue(result, "Update should return true for existing customer");
+        }
+
+        /// <summary>
+        /// Tests that the 'UpdateCustomer' method should return false when trying to update a non-existing customer.
+        /// </summary>
+        [TestMethod]
+        public void UpdateCustomer_ShouldReturnFalseForNonExistingCustomer()
+        {
+            // Arrange
+            customerList.AddCustomer(testCustomer1);
+
+            // Act
+            bool result = customerList.UpdateCustomer(999, "New Name", "New Contact");
+
+            // Assert
+            Assert.IsFalse(result, "Update should return false for non-existing customer");
+        }
+
+        /// <summary>
+        /// Tests that the 'Count'should return 0 when the list is empty.
+        /// </summary>
+        [TestMethod]
+        public void Count_ShouldReturnZeroForEmptyList()
+        {
+            // Assert
+            Assert.AreEqual(0, customerList.Count, "Count should be 0 for empty list");
+        }
+
+        /// <summary>
+        /// Tests that the 'Count' should return the correct number of customers in the list.
+        /// </summary>
+        [TestMethod]
+        public void Count_ShouldReturnCorrectCountForNonEmptyList()
+        {
+            // Arrange
+            customerList.AddCustomer(testCustomer1);
+            customerList.AddCustomer(testCustomer2);
+
+            // Assert
+            Assert.AreEqual(2, customerList.Count, "Count should be 2 after adding two customers");
+        }
+
+        /// <summary>
+        /// Tests that the 'Clear' method should empty the list.
+        /// </summary>
+        [TestMethod]
+        public void Clear_ShouldEmptyTheList()
+        {
+            // Arrange
+            customerList.AddCustomer(testCustomer1);
+            customerList.AddCustomer(testCustomer2);
+
+            // Act
+            customerList.Clear();
+
+            // Assert
+            Assert.AreEqual(0, customerList.Count, "Count should be 0 after Clear");
+        }
     }
 }
