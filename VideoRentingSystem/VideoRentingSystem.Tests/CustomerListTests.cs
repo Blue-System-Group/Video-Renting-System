@@ -98,5 +98,19 @@ namespace VideoRentingSystem.Tests
             Assert.IsFalse(result, "Remove should return false for non-existing customer");
             Assert.AreEqual(1, customerList.Count, "Count should remain 1");
         }
+
+        /// <summary>
+        /// Tests that the 'RemoveCustomer' method correctly handles the case when the list is empty.
+        /// </summary>
+        [TestMethod]
+        public void RemoveCustomer_ShouldHandleEmptyList()
+        {
+            // Act
+            bool result = customerList.RemoveCustomer(1);
+
+            // Assert
+            Assert.IsFalse(result, "Remove should return false for empty list");
+            Assert.AreEqual(0, customerList.Count, "Count should remain 0");
+        }
     }
 }
