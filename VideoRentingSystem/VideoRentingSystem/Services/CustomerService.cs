@@ -3,6 +3,7 @@ using System;
 using VideoRentingSystem.Data;
 using VideoRentingSystem.DataStructures;
 using VideoRentingSystem.Models;
+using System.Data.SqlClient;
 
 namespace VideoRentingSystem.Services
 {
@@ -81,6 +82,30 @@ namespace VideoRentingSystem.Services
         public void DisplayCustomers()
         {
             _customerList.DisplayCustomers();
+        }
+
+        // method to display a specific customer by ID
+        public void DisplayCustomer(int customerId)
+        {
+            // Display customer from the linked list
+            _customerList.DisplayCustomer(customerId);
+            // Display customer record from the database
+            string query = "SELECT * FROM Customers WHERE CustomerID = @ID";
+            DataTable customer = _dataAccess.GetData(query, cmd =>
+            {
+                var sqlCommand = cmd as SqlCommand; // Cast cmd to SqlCommand
+                if (sqlCommand != null)
+                {
+                    sqlCommand.Parameters.AddWithValue("@ID", customerId);
+                }
+            });
+            if (customer.Rows.Count == 0)
+            {
+                Console.WriteLine("Customer not found.");
+                return;
+            }
+            DataRow row = customer.Rows[0];
+            Console.WriteLine($"ID: {row["CustomerID"]}, Name: {row["Name"]}, Contact: {row["Contact"]}");
         }
     }
 }

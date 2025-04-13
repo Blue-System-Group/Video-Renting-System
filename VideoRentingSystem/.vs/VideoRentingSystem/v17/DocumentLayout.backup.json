@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "VideoRentingSystem\\Services\\CustomerService.cs",
               "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Services\\CustomerService.cs",
               "RelativeToolTip": "VideoRentingSystem\\Services\\CustomerService.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAqwE8AAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAiwFwAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T18:02:19.989Z",
               "EditorCaption": ""
@@ -71,8 +71,7 @@
               "RelativeToolTip": "VideoRentingSystem.Tests\\UserListTests.cs",
               "ViewState": "AgIAAJcAAAAAAAAAAAA2wLQAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T13:17:56.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T13:17:56.938Z"
             },
             {
               "$type": "Document",
