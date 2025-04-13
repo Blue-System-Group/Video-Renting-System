@@ -111,5 +111,22 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.IsNull(result, "Should return null for non-existing user");
         }
+
+        /// <summary>
+        /// Test method to validate a user with correct credentials.
+        /// </summary>
+        [TestMethod]
+        public void ValidateUser_ShouldReturnUserForValidCredentials()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+
+            // Act
+            var result = userList.ValidateUser("admin", "admin123");
+
+            // Assert
+            Assert.IsNotNull(result, "Valid user should be returned");
+            Assert.AreEqual(adminUser.Username, result.Username, "Usernames should match");
+        }
     }
 }
