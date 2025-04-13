@@ -48,5 +48,20 @@ namespace VideoRentingSystem.Tests
                 ReferenceID = "300"
             };
         }
+
+
+        /// <summary>
+        /// Test method to verify singleton instance of UserList.
+        /// </summary>
+        [TestMethod]
+        public void Instance_ShouldReturnSingletonInstance()
+        {
+            // Arrange
+            var instance1 = UserList.Instance;
+            var instance2 = UserList.Instance;
+
+            // Assert
+            Assert.AreSame(instance1, instance2, "Instance should return the same object");
+        }
     }
 }
