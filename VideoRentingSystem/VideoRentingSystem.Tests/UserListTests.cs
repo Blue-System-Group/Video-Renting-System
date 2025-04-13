@@ -144,5 +144,21 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.IsNull(result, "Should return null for invalid password");
         }
+
+        /// <summary>
+        /// Test method to validate a user with incorrect username
+        /// </summary>
+        [TestMethod]
+        public void ValidateUser_ShouldReturnNullForInvalidUsername()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+
+            // Act
+            var result = userList.ValidateUser("wronguser", "admin123");
+
+            // Assert
+            Assert.IsNull(result, "Should return null for invalid username");
+        }
     }
 }
