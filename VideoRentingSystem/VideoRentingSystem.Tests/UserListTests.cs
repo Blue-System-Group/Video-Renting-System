@@ -76,5 +76,25 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.IsNotNull(userList.GetUser("admin"), "User should be added to the list");
         }
+
+        /// <summary>
+        /// Test method to get a user by username.
+        /// </summary>
+        [TestMethod]
+        public void GetUser_ShouldReturnCorrectUser()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+            userList.AddUser(customerUser);
+
+            // Act
+            var result = userList.GetUser("customer1");
+
+            // Assert
+            Assert.IsNotNull(result, "User should be found");
+            Assert.AreEqual(customerUser.UserID, result.UserID, "User IDs should match");
+            Assert.AreEqual(customerUser.Username, result.Username, "Usernames should match");
+        }
+
     }
 }
