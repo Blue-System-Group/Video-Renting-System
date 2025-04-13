@@ -76,5 +76,11 @@ namespace VideoRentingSystem.Services
 
             Console.WriteLine("Customer removed successfully!");
         }
+
+        // method to display all customers in the linked list
+        public void DisplayCustomers()
+        {
+            _customerList.DisplayCustomers();
+        }
     }
 }
