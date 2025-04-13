@@ -96,5 +96,20 @@ namespace VideoRentingSystem.Tests
             Assert.AreEqual(customerUser.Username, result.Username, "Usernames should match");
         }
 
+        /// <summary>
+        /// Test method to  get non-existing user by username.
+        /// </summary>
+        [TestMethod]
+        public void GetUser_ShouldReturnNullForNonExistingUser()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+
+            // Act
+            var result = userList.GetUser("nonexistent");
+
+            // Assert
+            Assert.IsNull(result, "Should return null for non-existing user");
+        }
     }
 }
