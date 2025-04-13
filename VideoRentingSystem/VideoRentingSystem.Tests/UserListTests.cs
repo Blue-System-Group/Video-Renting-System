@@ -63,5 +63,18 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.AreSame(instance1, instance2, "Instance should return the same object");
         }
+
+        /// <summary>
+        /// Test method to add a user to the list.
+        /// </summary>
+        [TestMethod]
+        public void AddUser_ShouldAddUserToTheList()
+        {
+            // Act
+            userList.AddUser(adminUser);
+
+            // Assert
+            Assert.IsNotNull(userList.GetUser("admin"), "User should be added to the list");
+        }
     }
 }
