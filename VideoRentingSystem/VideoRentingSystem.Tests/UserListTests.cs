@@ -10,5 +10,43 @@ namespace VideoRentingSystem.Tests
         private User adminUser;
         private User customerUser;
         private User regularUser;
+
+
+        /// <summary>
+        /// TestInitialize method to set up the test environment.
+        /// </summary>
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            userList = new UserList();
+            userList.Clear(); // Clear any existing data before each test
+
+            adminUser = new User
+            {
+                UserID = 1,
+                Username = "admin",
+                PasswordHash = "admin123",
+                Role = "Admin",
+                ReferenceID = "100"
+            };
+
+            customerUser = new User
+            {
+                UserID = 2,
+                Username = "customer1",
+                PasswordHash = "cust123",
+                Role = "Customer",
+                ReferenceID = "200"
+            };
+
+            regularUser = new User
+            {
+                UserID = 3,
+                Username = "user1",
+                PasswordHash = "user123",
+                Role = "User",
+                ReferenceID = "300"
+            };
+        }
     }
 }
