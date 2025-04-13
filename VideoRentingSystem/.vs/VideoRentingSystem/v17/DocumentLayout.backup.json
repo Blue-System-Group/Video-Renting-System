@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "VideoRentingSystem.Tests\\UserListTests.cs",
               "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\UserListTests.cs",
               "RelativeToolTip": "VideoRentingSystem.Tests\\UserListTests.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAiwA8AAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAqwDkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T13:17:56.938Z",
               "EditorCaption": ""
@@ -67,8 +67,7 @@
               "RelativeToolTip": "VideoRentingSystem.Tests\\RentalHashTableTests.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T13:17:53.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T13:17:53.431Z"
             },
             {
               "$type": "Document",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "VideoRentingSystem.Tests\\MSTestSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T13:17:51.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T13:17:51.69Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "VideoRentingSystem.Tests\\CustomerListTests.cs",
               "ViewState": "AgIAAJwAAAAAAAAAAAAqwK8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T04:54:55.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T04:54:55.456Z"
             }
           ]
         }
