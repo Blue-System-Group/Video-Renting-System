@@ -253,5 +253,20 @@ namespace VideoRentingSystem.Tests
             Assert.IsTrue(result, "Should return true when user is removed");
             Assert.IsNull(userList.GetUser("admin"), "User should no longer exist in the list");
         }
+        /// <summary>
+        /// Test method to check remove user for a non-existing user.
+        /// </summary>
+        [TestMethod]
+        public void RemoveUser_ShouldReturnFalseForNonExistingUser()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+
+            // Act
+            bool result = userList.RemoveUser(999); // Non-existing ID
+
+            // Assert
+            Assert.IsFalse(result, "Should return false for non-existing user");
+        }
     }
 }
