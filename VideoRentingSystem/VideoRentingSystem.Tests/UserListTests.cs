@@ -206,5 +206,20 @@ namespace VideoRentingSystem.Tests
             Assert.IsFalse(result, "Should return false for non-existing user");
         }
 
+        /// <summary>
+        /// Test method to check isCustomer for a existing customer user.
+        /// </summary>
+        [TestMethod]
+        public void IsCustomer_ShouldReturnTrueForCustomerUser()
+        {
+            // Arrange
+            userList.AddUser(customerUser);
+
+            // Act
+            var result = userList.IsCustomer("customer1");
+
+            // Assert
+            Assert.IsTrue(result, "Should return true for customer user");
+        }
     }
 }
