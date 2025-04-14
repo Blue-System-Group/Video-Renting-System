@@ -317,5 +317,23 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.IsFalse(result, "Should return false for non-existing user");
         }
+
+        /// <summary>
+        /// Test method to check clear method for the user list.
+        /// </summary>
+        [TestMethod]
+        public void Clear_ShouldEmptyTheList()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+            userList.AddUser(customerUser);
+
+            // Act
+            userList.Clear();
+
+            // Assert
+            Assert.IsNull(userList.GetUser("admin"), "Admin user should be removed");
+            Assert.IsNull(userList.GetUser("customer1"), "Customer user should be removed");
+        }
     }
 }
