@@ -38,5 +38,24 @@ namespace VideoRentingSystem.Services
             }
             //Console.WriteLine("Data loaded successfully!");
         }
+
+        // method to add a user to the linked list and database
+        public void AddUser(User user)
+        {
+            _userList.AddUser(user);  // Add to linked list
+
+            // Insert user record into the database
+            string query = "INSERT INTO Users (Username, PasswordHash, Role, ReferenceID) VALUES (@Username, @PasswordHash, @Role, @ReferenceID)";
+            _dataAccess.ExecuteQuery(query, cmd =>
+            {
+                cmd.Parameters.AddWithValue("@Username", user.Username);
+                cmd.Parameters.AddWithValue("@PasswordHash", user.PasswordHash);
+                cmd.Parameters.AddWithValue("@Role", user.Role);
+                cmd.Parameters.AddWithValue("@ReferenceID", user.ReferenceID);
+            });
+
+            Console.WriteLine("User added successfully!");
+        }
+
     }
 }
