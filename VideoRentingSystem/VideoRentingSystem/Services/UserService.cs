@@ -114,5 +114,11 @@ namespace VideoRentingSystem.Services
         {
             _userList.DisplayUsers();
         }
+
+        // method to authenticate user
+        public User AuthenticateUser(string username, string password)
+        {
+            return _userList.ValidateUser(username, password);
+        }
     }
 }
