@@ -30,7 +30,7 @@ namespace VideoRentingSystem
             customerService.LoadData();
             videoService.LoadData();
             rentalService.LoadData();
-            //userService.LoadData();
+            userService.LoadData();
 
             Console.WriteLine("Data successfully loaded.");
         }
