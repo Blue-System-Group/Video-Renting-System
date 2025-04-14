@@ -15,6 +15,11 @@ namespace VideoRentingSystem
             // Load data from the database
             LoadData();
 
+            // Display welcome message
+            Console.WriteLine("=====================================");
+            Console.WriteLine("          Welcome to the System");
+            Console.WriteLine("=====================================");
+
         }
 
         /// Method to load data from the database
