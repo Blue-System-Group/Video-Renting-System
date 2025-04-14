@@ -295,5 +295,27 @@ namespace VideoRentingSystem.Tests
             Assert.AreEqual("newpass", retrievedUser.PasswordHash, "Password should be updated");
             Assert.AreEqual("SuperAdmin", retrievedUser.Role, "Role should be updated");
         }
+        /// <summary>
+        /// Test method to check update user for a non-existing user.
+        /// </summary>
+        [TestMethod]
+        public void UpdateUser_ShouldReturnFalseForNonExistingUser()
+        {
+            // Arrange
+            var nonExistingUser = new User
+            {
+                UserID = 999,
+                Username = "nonexistent",
+                PasswordHash = "pass",
+                Role = "User",
+                ReferenceID = "999"
+            };
+
+            // Act
+            bool result = userList.UpdateUser(nonExistingUser);
+
+            // Assert
+            Assert.IsFalse(result, "Should return false for non-existing user");
+        }
     }
 }
