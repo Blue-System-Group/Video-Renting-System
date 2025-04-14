@@ -78,6 +78,36 @@ namespace VideoRentingSystem.Services
             }
         }
 
-
+        // method to update user in the linked list and database
+        public void UpdateUser(int userId, string username, string passwordHash, string role, string referenceID)
+        {
+            // Update user in the linked list
+            bool updated = _userList.UpdateUser(new User
+            {
+                UserID = userId,
+                Username = username,
+                PasswordHash = passwordHash,
+                Role = role,
+                ReferenceID = referenceID
+            });
+            if (!updated)
+            {
+                Console.WriteLine("User not found.");
+            }
+            else
+            {
+                // Update user record in the database
+                string query = "UPDATE Users SET Username = @Username, PasswordHash = @PasswordHash, Role = @Role, ReferenceID = @ReferenceID WHERE UserID = @UserID";
+                _dataAccess.ExecuteQuery(query, cmd =>
+                {
+                    cmd.Parameters.AddWithValue("@UserID", userId);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@PasswordHash", passwordHash);
+                    cmd.Parameters.AddWithValue("@Role", role);
+                    cmd.Parameters.AddWithValue("@ReferenceID", referenceID);
+                });
+                Console.WriteLine("User updated successfully!");
+            }
+        }
     }
 }
