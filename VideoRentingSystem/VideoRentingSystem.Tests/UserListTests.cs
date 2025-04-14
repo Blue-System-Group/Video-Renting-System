@@ -268,5 +268,32 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.IsFalse(result, "Should return false for non-existing user");
         }
+        /// <summary>
+        /// Test method to check update user for a existing user.
+        /// </summary>
+        [TestMethod]
+        public void UpdateUser_ShouldUpdateExistingUser()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+            var updatedUser = new User
+            {
+                UserID = adminUser.UserID,
+                Username = "updatedAdmin",
+                PasswordHash = "newpass",
+                Role = "SuperAdmin",
+                ReferenceID = "999"
+            };
+
+            // Act
+            bool result = userList.UpdateUser(updatedUser);
+
+            // Assert
+            Assert.IsTrue(result, "Should return true when user is updated");
+            var retrievedUser = userList.GetUser("updatedAdmin");
+            Assert.IsNotNull(retrievedUser, "Updated user should exist");
+            Assert.AreEqual("newpass", retrievedUser.PasswordHash, "Password should be updated");
+            Assert.AreEqual("SuperAdmin", retrievedUser.Role, "Role should be updated");
+        }
     }
 }
