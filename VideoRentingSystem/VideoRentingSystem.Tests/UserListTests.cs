@@ -192,5 +192,19 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.IsFalse(result, "Should return false for non-admin user");
         }
+
+        /// <summary>
+        /// Test method to check isAdmin for a non-existing user.
+        /// </summary>
+        [TestMethod]
+        public void IsAdmin_ShouldReturnFalseForNonExistingUser()
+        {
+            // Act
+            var result = userList.IsAdmin("nonexistent");
+
+            // Assert
+            Assert.IsFalse(result, "Should return false for non-existing user");
+        }
+
     }
 }
