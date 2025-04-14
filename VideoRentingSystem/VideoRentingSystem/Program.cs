@@ -1,5 +1,7 @@
 ﻿using System;
+using VideoRentingSystem.Models;
 using VideoRentingSystem.Services;
+using VideoRentingSystem.Utils;
 
 namespace VideoRentingSystem
 {
@@ -20,6 +22,24 @@ namespace VideoRentingSystem
             Console.WriteLine("          Welcome to the System");
             Console.WriteLine("=====================================");
 
+            // Prompt user for login
+            User loggedInUser = Login();
+
+            // Check if login was successful
+            if (loggedInUser == null)
+            {
+                Console.WriteLine("=====================================");
+                Console.WriteLine("    Authentication Failed. Exiting...");
+                Console.WriteLine("=====================================");
+                return;
+            }
+
+            // Display user information
+            Console.WriteLine("=====================================");
+            Console.WriteLine($"   Welcome, {loggedInUser.Username}!");
+            Console.WriteLine($"   Role: {loggedInUser.Role}");
+            Console.WriteLine("=====================================");
+
         }
 
         /// Method to load data from the database
@@ -33,6 +53,28 @@ namespace VideoRentingSystem
             userService.LoadData();
 
             Console.WriteLine("Data successfully loaded.");
+        }
+
+        // Method to handle user login
+        static User Login()
+        {
+            string username = InputHelper.GetStringInput("Enter your username: ");
+            string password = InputHelper.GetStringInput("Enter your password: ");
+
+            User user = userService.AuthenticateUser(username, password);
+
+            if (user != null)
+            {
+                Console.WriteLine("=====================================");
+                Console.WriteLine("        Login Successful!");
+                Console.WriteLine("=====================================");
+                return user;
+            }
+
+            Console.WriteLine("=====================================");
+            Console.WriteLine("    Invalid username or password.");
+            Console.WriteLine("=====================================");
+            return null;
         }
     }
 }
