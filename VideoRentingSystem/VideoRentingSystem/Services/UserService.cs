@@ -109,5 +109,10 @@ namespace VideoRentingSystem.Services
                 Console.WriteLine("User updated successfully!");
             }
         }
+        // method to display all users in the linked list
+        public void DisplayUsers()
+        {
+            _userList.DisplayUsers();
+        }
     }
 }
