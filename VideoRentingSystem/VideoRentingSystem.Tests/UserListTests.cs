@@ -236,5 +236,22 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.IsFalse(result, "Should return false for non-customer user");
         }
+        /// <summary>
+        /// Test method to check remove user for a existing user.
+        /// </summary>
+        [TestMethod]
+        public void RemoveUser_ShouldRemoveExistingUser()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+            userList.AddUser(customerUser);
+
+            // Act
+            bool result = userList.RemoveUser(adminUser.UserID);
+
+            // Assert
+            Assert.IsTrue(result, "Should return true when user is removed");
+            Assert.IsNull(userList.GetUser("admin"), "User should no longer exist in the list");
+        }
     }
 }
