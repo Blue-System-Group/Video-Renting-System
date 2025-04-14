@@ -120,5 +120,19 @@ namespace VideoRentingSystem.Services
         {
             return _userList.ValidateUser(username, password);
         }
+
+        // method to search for a user by username
+        public void SearchUser(string username)
+        {
+            User user = _userList.GetUser(username);
+            if (user == null)
+            {
+                Console.WriteLine("User not found.");
+            }
+            else
+            {
+                Console.WriteLine($"User ID: {user.UserID} | Username: {user.Username} | Role: {user.Role}");
+            }
+        }
     }
 }
