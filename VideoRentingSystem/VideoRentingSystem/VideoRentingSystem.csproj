@@ -62,6 +62,7 @@
     <Compile Include="Services\RentalService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Services\VideoService.cs" />
+    <Compile Include="Utils\InputHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE271D73-13C7-41EE-BCE8-580EE247E219}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem.tests\\userlisttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE271D73-13C7-41EE-BCE8-580EE247E219}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|solutionrelative:videorentingsystem.tests\\userlisttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE271D73-13C7-41EE-BCE8-580EE247E219}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem.tests\\rentalhashtabletests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE271D73-13C7-41EE-BCE8-580EE247E219}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|solutionrelative:videorentingsystem.tests\\rentalhashtabletests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE271D73-13C7-41EE-BCE8-580EE247E219}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem.tests\\mstestsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE271D73-13C7-41EE-BCE8-580EE247E219}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|solutionrelative:videorentingsystem.tests\\mstestsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE271D73-13C7-41EE-BCE8-580EE247E219}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem.tests\\customerlisttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE271D73-13C7-41EE-BCE8-580EE247E219}|VideoRentingSystem.Tests\\VideoRentingSystem.Tests.csproj|solutionrelative:videorentingsystem.tests\\customerlisttests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\videorentingsystem\\services\\videoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\services\\videoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,52 +38,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserListTests.cs",
-              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\UserListTests.cs",
-              "RelativeDocumentMoniker": "VideoRentingSystem.Tests\\UserListTests.cs",
-              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\UserListTests.cs",
-              "RelativeToolTip": "VideoRentingSystem.Tests\\UserListTests.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAqwKQAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "VideoService.cs",
+              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Services\\VideoService.cs",
+              "RelativeDocumentMoniker": "VideoRentingSystem\\Services\\VideoService.cs",
+              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Services\\VideoService.cs",
+              "RelativeToolTip": "VideoRentingSystem\\Services\\VideoService.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwGkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T13:17:56.938Z",
+              "WhenOpened": "2025-04-14T04:56:34.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RentalHashTableTests.cs",
-              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\RentalHashTableTests.cs",
-              "RelativeDocumentMoniker": "VideoRentingSystem.Tests\\RentalHashTableTests.cs",
-              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\RentalHashTableTests.cs",
-              "RelativeToolTip": "VideoRentingSystem.Tests\\RentalHashTableTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Program.cs",
+              "RelativeDocumentMoniker": "VideoRentingSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Program.cs",
+              "RelativeToolTip": "VideoRentingSystem\\Program.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAUwK0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T13:17:53.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MSTestSettings.cs",
-              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\MSTestSettings.cs",
-              "RelativeDocumentMoniker": "VideoRentingSystem.Tests\\MSTestSettings.cs",
-              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\MSTestSettings.cs",
-              "RelativeToolTip": "VideoRentingSystem.Tests\\MSTestSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T13:17:51.69Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomerListTests.cs",
-              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\CustomerListTests.cs",
-              "RelativeDocumentMoniker": "VideoRentingSystem.Tests\\CustomerListTests.cs",
-              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem.Tests\\CustomerListTests.cs",
-              "RelativeToolTip": "VideoRentingSystem.Tests\\CustomerListTests.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAqwK8AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T04:54:55.456Z"
+              "WhenOpened": "2025-04-14T04:53:05.743Z",
+              "EditorCaption": ""
             }
           ]
         }
