@@ -40,6 +40,52 @@ namespace VideoRentingSystem
             Console.WriteLine($"   Role: {loggedInUser.Role}");
             Console.WriteLine("=====================================");
 
+            // Main menu loop
+            while (true)
+            {
+                if (loggedInUser.Role == "Admin")
+                {
+                    Console.WriteLine("1. Manage Customers");
+                    Console.WriteLine("2. Manage Videos");
+                    Console.WriteLine("3. Manage Rentals");
+                    Console.WriteLine("4. Manage Users");
+                }
+                else
+                {
+                    Console.WriteLine("\n1. Rent Video");
+                    Console.WriteLine("2. Return Video");
+                    Console.WriteLine("3. Display Pending Returns");
+                }
+
+                Console.WriteLine("0. Exit");
+                Console.Write("Please enter your choice: ");
+
+                int choice = InputHelper.GetIntInput("");
+
+                if (loggedInUser.Role == "Admin")
+                {
+                    switch (choice)
+                    {
+                        //case 1: ManageCustomers(); break;
+                        //case 2: ManageVideos(); break;
+                        //case 3: ManageRentals(); break;
+                        //case 4: ManageUsers(); break;
+                        case 0: Environment.Exit(0); break;
+                        default: Console.WriteLine("Invalid selection. Please try again."); break;
+                    }
+                }
+                else if (loggedInUser.Role == "Customer")
+                {
+                    switch (choice)
+                    {
+                        //case 1: RentVideoCustomer(int.Parse(loggedInUser.ReferenceID)); break;
+                        //case 2: ReturnVideoCustomer(int.Parse(loggedInUser.ReferenceID)); break;
+                        //case 3: rentalService.DisplayYetToReturn(); break;
+                        case 0: Environment.Exit(0); break;
+                        default: Console.WriteLine("Invalid selection. Please try again."); break;
+                    }
+                }
+            }
         }
 
         /// Method to load data from the database
@@ -75,6 +121,54 @@ namespace VideoRentingSystem
             Console.WriteLine("    Invalid username or password.");
             Console.WriteLine("=====================================");
             return null;
+        }
+
+        /// Method to manage videos
+        static void ManageVideos()
+        {
+            Console.WriteLine("1. Add Video");
+            Console.WriteLine("2. Remove Video");
+            Console.WriteLine("3. Display Videos");
+            Console.WriteLine("4. Search Video");
+            Console.WriteLine("5. Update Video");
+            Console.WriteLine("0. Back");
+            Console.Write("Enter your choice: ");
+            int choice = InputHelper.GetIntInput("");
+            switch (choice)
+            {
+                case 1: AddVideo(); break;
+                case 2: RemoveVideo(); break;
+                case 3: DisplayVideos(); break;
+                //case 4: SearchVideo(); break;
+                //case 5: UpdateVideo(); break;
+                case 0: return;
+                default: Console.WriteLine("Invalid choice. Please try again."); break;
+            }
+        }
+
+        /// Method to add a new video
+        static void AddVideo()
+        {
+            string title = InputHelper.GetStringInput("Enter video title: ");
+            string genre = InputHelper.GetStringInput("Enter video genre: ");
+            string releaseDate = InputHelper.GetStringInput("Enter video release date (yyyy-MM-dd): ");
+            Video video = new Video { Title = title, Genre = genre, ReleaseDate = DateTime.Parse(releaseDate), Availability = true };
+            videoService.AddVideo(video);
+            videoService.LoadData();
+        }
+
+        /// Method to remove a video
+        static void RemoveVideo()
+        {
+            DisplayVideos();
+            int videoId = InputHelper.GetIntInput("Enter video ID: ");
+            videoService.RemoveVideo(videoId);
+        }
+
+        /// Method to display all videos
+        static void DisplayVideos()
+        {
+            videoService.DisplayVideos();
         }
     }
 }

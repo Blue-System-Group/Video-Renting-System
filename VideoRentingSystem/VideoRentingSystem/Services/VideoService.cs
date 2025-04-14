@@ -102,5 +102,10 @@ namespace VideoRentingSystem.Services
                 Console.WriteLine("Video with ID " + videoId + " not found.");
             }
         }
+
+        public void DisplayVideos()
+        {
+            _videoTree.DisplayAllVideos();
+        }
     }
 }
