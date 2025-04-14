@@ -1,4 +1,5 @@
-﻿using VideoRentingSystem.Services;
+﻿using System;
+using VideoRentingSystem.Services;
 
 namespace VideoRentingSystem
 {
@@ -11,6 +12,22 @@ namespace VideoRentingSystem
 
         static void Main(string[] args)
         {
+            // Load data from the database
+            LoadData();
+
+        }
+
+        /// Method to load data from the database
+        static void LoadData()
+        {
+            Console.WriteLine("Loading application data. Please wait...");
+
+            customerService.LoadData();
+            videoService.LoadData();
+            rentalService.LoadData();
+            //userService.LoadData();
+
+            Console.WriteLine("Data successfully loaded.");
         }
     }
 }
