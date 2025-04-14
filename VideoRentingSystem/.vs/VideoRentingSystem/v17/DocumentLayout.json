@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|c:\\users\\nimes\\source\\repos\\videorentingsystem\\videorentingsystem\\utils\\inputhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3056C6A3-F65C-4604-8E73-BFD89567DB4D}|VideoRentingSystem\\VideoRentingSystem.csproj|solutionrelative:videorentingsystem\\utils\\inputhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,19 +43,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Program.cs",
+              "RelativeDocumentMoniker": "VideoRentingSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Program.cs",
+              "RelativeToolTip": "VideoRentingSystem\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T02:43:28.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "InputHelper.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Utils\\InputHelper.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\Utils\\InputHelper.cs",
               "ToolTip": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Utils\\InputHelper.cs",
               "RelativeToolTip": "VideoRentingSystem\\Utils\\InputHelper.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBwAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T18:17:37.606Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "VideoService.cs",
               "DocumentMoniker": "C:\\Users\\nimes\\source\\repos\\VideoRentingSystem\\VideoRentingSystem\\Services\\VideoService.cs",
               "RelativeDocumentMoniker": "VideoRentingSystem\\Services\\VideoService.cs",
