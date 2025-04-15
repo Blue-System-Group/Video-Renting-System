@@ -141,8 +141,8 @@ namespace VideoRentingSystem
                 case 1: AddVideo(); break;
                 case 2: RemoveVideo(); break;
                 case 3: DisplayVideos(); break;
-                //case 4: SearchVideo(); break;
-                //case 5: UpdateVideo(); break;
+                case 4: SearchVideo(); break;
+                case 5: UpdateVideo(); break;
                 case 0: return;
                 default: Console.WriteLine("Invalid choice. Please try again."); break;
             }
@@ -171,6 +171,22 @@ namespace VideoRentingSystem
         static void DisplayVideos()
         {
             videoService.DisplayVideos();
+        }
+
+        /// Method to search video 
+        static void SearchVideo()
+        {
+            int videoId = InputHelper.GetIntInput("Enter video ID: ");
+            videoService.SearchVideo(videoId);
+        }
+
+        static void UpdateVideo()
+        {
+            int videoId = InputHelper.GetIntInput("Enter video ID: ");
+            string title = InputHelper.GetStringInput("Enter new title: ");
+            string genre = InputHelper.GetStringInput("Enter new genre: ");
+            string releaseDate = InputHelper.GetStringInput("Enter new release date (yyyy-MM-dd): ");
+            videoService.UpdateVideo(videoId, title, genre, DateTime.Parse(releaseDate));
         }
 
         // method to manage customers
