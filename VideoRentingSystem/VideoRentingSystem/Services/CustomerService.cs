@@ -107,5 +107,36 @@ namespace VideoRentingSystem.Services
             DataRow row = customer.Rows[0];
             Console.WriteLine($"ID: {row["CustomerID"]}, Name: {row["Name"]}, Contact: {row["Contact"]}");
         }
+
+        public void UpdateCustomer(int customerId, string name, string contact)
+        {
+            // Update customer in the linked list
+            bool updated = _customerList.UpdateCustomer(customerId, name, contact);
+            if (!updated)
+            {
+                Console.WriteLine("Customer not found.");
+                return;
+            }
+            // Update customer record in the database
+            string query = "UPDATE Customers SET Name = @Name, Contact = @Contact WHERE CustomerID = @ID";
+            _dataAccess.ExecuteQuery(query, cmd =>
+            {
+                cmd.Parameters.AddWithValue("@Name", name);
+                cmd.Parameters.AddWithValue("@Contact", contact);
+                cmd.Parameters.AddWithValue("@ID", customerId);
+            });
+            Console.WriteLine("Customer updated successfully!");
+        }
+
+        public void SearchCustomer(int customerId)
+        {
+            // Search customer in the linked list
+            _customerList.SearchCustomer(customerId);
+            if (_customerList == null)
+            {
+                Console.WriteLine("Customer not found.");
+                return;
+            }
+        }
     }
 }
