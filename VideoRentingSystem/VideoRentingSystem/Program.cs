@@ -1,4 +1,6 @@
 ﻿using System;
+using VideoRentingSystem.Data;
+using VideoRentingSystem.DataStructures;
 using VideoRentingSystem.Models;
 using VideoRentingSystem.Services;
 using VideoRentingSystem.Utils;
@@ -66,8 +68,8 @@ namespace VideoRentingSystem
                 {
                     switch (choice)
                     {
-                        //case 1: ManageCustomers(); break;
-                        //case 2: ManageVideos(); break;
+                        case 1: ManageCustomers(); break;
+                        case 2: ManageVideos(); break;
                         //case 3: ManageRentals(); break;
                         //case 4: ManageUsers(); break;
                         case 0: Environment.Exit(0); break;
@@ -169,6 +171,69 @@ namespace VideoRentingSystem
         static void DisplayVideos()
         {
             videoService.DisplayVideos();
+        }
+
+        // method to manage customers
+        static void ManageCustomers()
+        {
+            Console.WriteLine("1. Add Customer");
+            Console.WriteLine("2. Remove Customer");
+            Console.WriteLine("3. Display Customers");
+            Console.WriteLine("4. Search Customer");
+            Console.WriteLine("5. Update Customer");
+            Console.WriteLine("0. Back");
+            Console.Write("Enter your choice: ");
+            int choice = InputHelper.GetIntInput("");
+            switch (choice)
+            {
+                case 1: AddCustomer(); break;
+                case 2: RemoveCustomer(); break;
+                case 3: DisplayCustomers(); break;
+                case 4: SearchCustomer(); break;
+                case 5: UpdateCustomer(); break;
+                case 0: return;
+                default: Console.WriteLine("Invalid choice. Please try again."); break;
+            }
+        }
+
+        // method to add customer
+        static void AddCustomer()
+        {
+            string name = InputHelper.GetStringInput("Enter customer name: ");
+            string contact = InputHelper.GetStringInput("Enter customer contact: ");
+            Customer customer = new Customer { Name = name, Contact = contact };
+            customerService.AddCustomer(customer);
+            customerService.LoadData();
+        }
+
+        // method to remove customer
+        static void RemoveCustomer()
+        {
+            DisplayCustomers();
+            int customerId = InputHelper.GetIntInput("Enter customer ID: ");
+            customerService.RemoveCustomer(customerId);
+        }
+
+        // method to display all customers
+        static void DisplayCustomers()
+        {
+            customerService.DisplayCustomers();
+        }
+
+        // method to search customer
+        static void SearchCustomer()
+        {
+            int customerId = InputHelper.GetIntInput("Enter customer ID: ");
+            customerService.SearchCustomer(customerId);
+        }
+
+        // method to update customer
+        static void UpdateCustomer()
+        {
+            int customerId = InputHelper.GetIntInput("Enter customer ID: ");
+            string name = InputHelper.GetStringInput("Enter new name: ");
+            string contact = InputHelper.GetStringInput("Enter new contact: ");
+            customerService.UpdateCustomer(customerId, name, contact);
         }
     }
 }

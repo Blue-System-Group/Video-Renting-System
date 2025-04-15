@@ -192,5 +192,168 @@ namespace VideoRentingSystem.Tests
             // Assert
             Assert.IsFalse(result, "Should return false for non-admin user");
         }
+
+        /// <summary>
+        /// Test method to check isAdmin for a non-existing user.
+        /// </summary>
+        [TestMethod]
+        public void IsAdmin_ShouldReturnFalseForNonExistingUser()
+        {
+            // Act
+            var result = userList.IsAdmin("nonexistent");
+
+            // Assert
+            Assert.IsFalse(result, "Should return false for non-existing user");
+        }
+
+        /// <summary>
+        /// Test method to check isCustomer for a existing customer user.
+        /// </summary>
+        [TestMethod]
+        public void IsCustomer_ShouldReturnTrueForCustomerUser()
+        {
+            // Arrange
+            userList.AddUser(customerUser);
+
+            // Act
+            var result = userList.IsCustomer("customer1");
+
+            // Assert
+            Assert.IsTrue(result, "Should return true for customer user");
+        }
+        /// <summary>
+        /// Test method to check isCustomer for a non-existing user.
+        /// </summary>
+        [TestMethod]
+        public void IsCustomer_ShouldReturnFalseForNonCustomerUser()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+
+            // Act
+            var result = userList.IsCustomer("admin");
+
+            // Assert
+            Assert.IsFalse(result, "Should return false for non-customer user");
+        }
+        /// <summary>
+        /// Test method to check remove user for a existing user.
+        /// </summary>
+        [TestMethod]
+        public void RemoveUser_ShouldRemoveExistingUser()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+            userList.AddUser(customerUser);
+
+            // Act
+            bool result = userList.RemoveUser(adminUser.UserID);
+
+            // Assert
+            Assert.IsTrue(result, "Should return true when user is removed");
+            Assert.IsNull(userList.GetUser("admin"), "User should no longer exist in the list");
+        }
+        /// <summary>
+        /// Test method to check remove user for a non-existing user.
+        /// </summary>
+        [TestMethod]
+        public void RemoveUser_ShouldReturnFalseForNonExistingUser()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+
+            // Act
+            bool result = userList.RemoveUser(999); // Non-existing ID
+
+            // Assert
+            Assert.IsFalse(result, "Should return false for non-existing user");
+        }
+        /// <summary>
+        /// Test method to check update user for a existing user.
+        /// </summary>
+        [TestMethod]
+        public void UpdateUser_ShouldUpdateExistingUser()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+            var updatedUser = new User
+            {
+                UserID = adminUser.UserID,
+                Username = "updatedAdmin",
+                PasswordHash = "newpass",
+                Role = "SuperAdmin",
+                ReferenceID = "999"
+            };
+
+            // Act
+            bool result = userList.UpdateUser(updatedUser);
+
+            // Assert
+            Assert.IsTrue(result, "Should return true when user is updated");
+            var retrievedUser = userList.GetUser("updatedAdmin");
+            Assert.IsNotNull(retrievedUser, "Updated user should exist");
+            Assert.AreEqual("newpass", retrievedUser.PasswordHash, "Password should be updated");
+            Assert.AreEqual("SuperAdmin", retrievedUser.Role, "Role should be updated");
+        }
+        /// <summary>
+        /// Test method to check update user for a non-existing user.
+        /// </summary>
+        [TestMethod]
+        public void UpdateUser_ShouldReturnFalseForNonExistingUser()
+        {
+            // Arrange
+            var nonExistingUser = new User
+            {
+                UserID = 999,
+                Username = "nonexistent",
+                PasswordHash = "pass",
+                Role = "User",
+                ReferenceID = "999"
+            };
+
+            // Act
+            bool result = userList.UpdateUser(nonExistingUser);
+
+            // Assert
+            Assert.IsFalse(result, "Should return false for non-existing user");
+        }
+
+        /// <summary>
+        /// Test method to check clear method for the user list.
+        /// </summary>
+        [TestMethod]
+        public void Clear_ShouldEmptyTheList()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+            userList.AddUser(customerUser);
+
+            // Act
+            userList.Clear();
+
+            // Assert
+            Assert.IsNull(userList.GetUser("admin"), "Admin user should be removed");
+            Assert.IsNull(userList.GetUser("customer1"), "Customer user should be removed");
+        }
+        /// <summary>
+        /// Test method to check display users for the user list.
+        /// </summary>
+        [TestMethod]
+        public void DisplayUsers_ShouldNotThrowException()
+        {
+            // Arrange
+            userList.AddUser(adminUser);
+            userList.AddUser(customerUser);
+
+            // Act & Assert
+            try
+            {
+                userList.DisplayUsers();
+            }
+            catch
+            {
+                Assert.Fail("DisplayUsers should not throw exceptions");
+            }
+        }
     }
 }
