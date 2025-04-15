@@ -1,33 +1,30 @@
 ﻿using System;
-using VideoRentingSystem.Data;
-using VideoRentingSystem.DataStructures;
 using VideoRentingSystem.Models;
 using VideoRentingSystem.Services;
 using VideoRentingSystem.Utils;
 
-namespace VideoRentingSystem
+namespace VideosRentingSystem
 {
     class Program
     {
-        private static CustomerService customerService = new CustomerService(); // CustomerService instance
-        private static VideoService videoService = new VideoService(); // VideoService instance
-        private static RentalService rentalService = new RentalService(); // RentalService instance
-        private static UserService userService = new UserService(); // UserService instance
+        private static CustomerService customerService = new CustomerService();
+        private static VideoService videoService = new VideoService();
+        private static RentalService rentalService = new RentalService();
+        private static UserService userService = new UserService();
 
         static void Main(string[] args)
         {
             // Load data from the database
             LoadData();
 
-            // Display welcome message
+            // Login Process
             Console.WriteLine("=====================================");
             Console.WriteLine("          Welcome to the System");
             Console.WriteLine("=====================================");
 
-            // Prompt user for login
+
             User loggedInUser = Login();
 
-            // Check if login was successful
             if (loggedInUser == null)
             {
                 Console.WriteLine("=====================================");
@@ -36,13 +33,13 @@ namespace VideoRentingSystem
                 return;
             }
 
-            // Display user information
+
             Console.WriteLine("=====================================");
             Console.WriteLine($"   Welcome, {loggedInUser.Username}!");
             Console.WriteLine($"   Role: {loggedInUser.Role}");
             Console.WriteLine("=====================================");
 
-            // Main menu loop
+
             while (true)
             {
                 if (loggedInUser.Role == "Admin")
@@ -70,8 +67,8 @@ namespace VideoRentingSystem
                     {
                         case 1: ManageCustomers(); break;
                         case 2: ManageVideos(); break;
-                        //case 3: ManageRentals(); break;
-                        //case 4: ManageUsers(); break;
+                        case 3: ManageRentals(); break;
+                        case 4: ManageUsers(); break;
                         case 0: Environment.Exit(0); break;
                         default: Console.WriteLine("Invalid selection. Please try again."); break;
                     }
@@ -80,17 +77,17 @@ namespace VideoRentingSystem
                 {
                     switch (choice)
                     {
-                        //case 1: RentVideoCustomer(int.Parse(loggedInUser.ReferenceID)); break;
-                        //case 2: ReturnVideoCustomer(int.Parse(loggedInUser.ReferenceID)); break;
-                        //case 3: rentalService.DisplayYetToReturn(); break;
+                        case 1: RentVideoCustomer(int.Parse(loggedInUser.ReferenceID)); break;
+                        case 2: ReturnVideoCustomer(int.Parse(loggedInUser.ReferenceID)); break;
+                        case 3: rentalService.DisplayYetToReturn(); break;
                         case 0: Environment.Exit(0); break;
                         default: Console.WriteLine("Invalid selection. Please try again."); break;
                     }
                 }
             }
+
         }
 
-        /// Method to load data from the database
         static void LoadData()
         {
             Console.WriteLine("Loading application data. Please wait...");
@@ -103,7 +100,7 @@ namespace VideoRentingSystem
             Console.WriteLine("Data successfully loaded.");
         }
 
-        // Method to handle user login
+
         static User Login()
         {
             string username = InputHelper.GetStringInput("Enter your username: ");
@@ -125,71 +122,7 @@ namespace VideoRentingSystem
             return null;
         }
 
-        /// Method to manage videos
-        static void ManageVideos()
-        {
-            Console.WriteLine("1. Add Video");
-            Console.WriteLine("2. Remove Video");
-            Console.WriteLine("3. Display Videos");
-            Console.WriteLine("4. Search Video");
-            Console.WriteLine("5. Update Video");
-            Console.WriteLine("0. Back");
-            Console.Write("Enter your choice: ");
-            int choice = InputHelper.GetIntInput("");
-            switch (choice)
-            {
-                case 1: AddVideo(); break;
-                case 2: RemoveVideo(); break;
-                case 3: DisplayVideos(); break;
-                case 4: SearchVideo(); break;
-                case 5: UpdateVideo(); break;
-                case 0: return;
-                default: Console.WriteLine("Invalid choice. Please try again."); break;
-            }
-        }
 
-        /// Method to add a new video
-        static void AddVideo()
-        {
-            string title = InputHelper.GetStringInput("Enter video title: ");
-            string genre = InputHelper.GetStringInput("Enter video genre: ");
-            string releaseDate = InputHelper.GetStringInput("Enter video release date (yyyy-MM-dd): ");
-            Video video = new Video { Title = title, Genre = genre, ReleaseDate = DateTime.Parse(releaseDate), Availability = true };
-            videoService.AddVideo(video);
-            videoService.LoadData();
-        }
-
-        /// Method to remove a video
-        static void RemoveVideo()
-        {
-            DisplayVideos();
-            int videoId = InputHelper.GetIntInput("Enter video ID: ");
-            videoService.RemoveVideo(videoId);
-        }
-
-        /// Method to display all videos
-        static void DisplayVideos()
-        {
-            videoService.DisplayVideos();
-        }
-
-        /// Method to search video 
-        static void SearchVideo()
-        {
-            int videoId = InputHelper.GetIntInput("Enter video ID: ");
-            videoService.SearchVideo(videoId);
-        }
-
-        static void UpdateVideo()
-        {
-            int videoId = InputHelper.GetIntInput("Enter video ID: ");
-            string title = InputHelper.GetStringInput("Enter new title: ");
-            string genre = InputHelper.GetStringInput("Enter new genre: ");
-            string releaseDate = InputHelper.GetStringInput("Enter new release date (yyyy-MM-dd): ");
-            videoService.UpdateVideo(videoId, title, genre, DateTime.Parse(releaseDate));
-        }
-
-        // method to manage customers
         static void ManageCustomers()
         {
             Console.WriteLine("1. Add Customer");
@@ -212,7 +145,68 @@ namespace VideoRentingSystem
             }
         }
 
-        // method to add customer
+        static void ManageVideos()
+        {
+            Console.WriteLine("1. Add Video");
+            Console.WriteLine("2. Remove Video");
+            Console.WriteLine("3. Display Videos");
+            Console.WriteLine("4. Search Video");
+            Console.WriteLine("5. Update Video");
+            Console.WriteLine("0. Back");
+            Console.Write("Enter your choice: ");
+            int choice = InputHelper.GetIntInput("");
+            switch (choice)
+            {
+                case 1: AddVideo(); break;
+                case 2: RemoveVideo(); break;
+                case 3: DisplayVideos(); break;
+                case 4: SearchVideo(); break;
+                case 5: UpdateVideo(); break;
+                case 0: return;
+                default: Console.WriteLine("Invalid choice. Please try again."); break;
+            }
+        }
+
+        static void ManageRentals()
+        {
+            Console.WriteLine("1. Rent Video");
+            Console.WriteLine("2. Return Video");
+            Console.WriteLine("3. Display Yet To Return Videos");
+            Console.WriteLine("0. Back");
+            Console.Write("Enter your choice: ");
+            int choice = InputHelper.GetIntInput("");
+            switch (choice)
+            {
+                case 1: RentVideo(); break;
+                case 2: ReturnVideo(); break;
+                case 3: rentalService.DisplayYetToReturn(); break;
+                case 0: return;
+                default: Console.WriteLine("Invalid choice. Please try again."); break;
+            }
+        }
+
+        static void ManageUsers()
+        {
+            Console.WriteLine("1. Add User");
+            Console.WriteLine("2. Remove User");
+            Console.WriteLine("3. Display Users");
+            Console.WriteLine("4. Search User");
+            Console.WriteLine("5. Update User");
+            Console.WriteLine("0. Back");
+            Console.Write("Enter your choice: ");
+            int choice = InputHelper.GetIntInput("");
+            switch (choice)
+            {
+                case 1: AddUser(); break;
+                case 2: RemoveUser(); break;
+                case 3: userService.DisplayUsers(); break;
+                case 4: SearchUser(); break;
+                case 5: UpdateUser(); break;
+                case 0: return;
+                default: Console.WriteLine("Invalid choice. Please try again."); break;
+            }
+        }
+
         static void AddCustomer()
         {
             string name = InputHelper.GetStringInput("Enter customer name: ");
@@ -222,7 +216,6 @@ namespace VideoRentingSystem
             customerService.LoadData();
         }
 
-        // method to remove customer
         static void RemoveCustomer()
         {
             DisplayCustomers();
@@ -230,26 +223,155 @@ namespace VideoRentingSystem
             customerService.RemoveCustomer(customerId);
         }
 
-        // method to display all customers
         static void DisplayCustomers()
         {
             customerService.DisplayCustomers();
         }
 
-        // method to search customer
         static void SearchCustomer()
         {
             int customerId = InputHelper.GetIntInput("Enter customer ID: ");
             customerService.SearchCustomer(customerId);
         }
 
-        // method to update customer
         static void UpdateCustomer()
         {
             int customerId = InputHelper.GetIntInput("Enter customer ID: ");
             string name = InputHelper.GetStringInput("Enter new name: ");
             string contact = InputHelper.GetStringInput("Enter new contact: ");
             customerService.UpdateCustomer(customerId, name, contact);
+        }
+
+        static void AddVideo()
+        {
+            string title = InputHelper.GetStringInput("Enter video title: ");
+            string genre = InputHelper.GetStringInput("Enter video genre: ");
+            string releaseDate = InputHelper.GetStringInput("Enter video release date (yyyy-MM-dd): ");
+            Video video = new Video { Title = title, Genre = genre, ReleaseDate = DateTime.Parse(releaseDate), Availability = true };
+            videoService.AddVideo(video);
+            videoService.LoadData();
+        }
+
+        static void RemoveVideo()
+        {
+            DisplayVideos();
+            int videoId = InputHelper.GetIntInput("Enter video ID: ");
+            videoService.RemoveVideo(videoId);
+        }
+
+        static void DisplayVideos()
+        {
+            videoService.DisplayVideos();
+        }
+
+        static void SearchVideo()
+        {
+            int videoId = InputHelper.GetIntInput("Enter video ID: ");
+            videoService.SearchVideo(videoId);
+        }
+
+        static void UpdateVideo()
+        {
+            int videoId = InputHelper.GetIntInput("Enter video ID: ");
+            string title = InputHelper.GetStringInput("Enter new title: ");
+            string genre = InputHelper.GetStringInput("Enter new genre: ");
+            string releaseDate = InputHelper.GetStringInput("Enter new release date (yyyy-MM-dd): ");
+            videoService.UpdateVideo(videoId, title, genre, DateTime.Parse(releaseDate));
+        }
+
+        static void RentVideo()
+        {
+            DisplayCustomers();
+            int customerId = InputHelper.GetIntInput("Enter customer ID: ");
+            DisplayVideos();
+            int videoId = InputHelper.GetIntInput("Enter video ID: ");
+            rentalService.RentVideo(customerId, videoId);
+            rentalService.LoadData();
+        }
+
+        static void RentVideoCustomer(int customerId)
+        {
+            DisplayVideos();
+            int videoId = InputHelper.GetIntInput("Enter video ID: ");
+            rentalService.RentVideo(customerId, videoId);
+            rentalService.LoadData();
+        }
+
+        static void ReturnVideoCustomer(int customerId)
+        {
+            if (rentalService.GetYetToReturnCount(customerId) == 0)
+            {
+                Console.WriteLine("No rentals available to return.");
+                return;
+            }
+            rentalService.DisplayYetToReturn(customerId);
+            int rentalId = InputHelper.GetIntInput("Enter rental ID: ");
+            rentalService.ReturnVideo(rentalId);
+        }
+
+        static void ReturnVideo()
+        {
+            if (rentalService.GetYetToReturnCount() == 0)
+            {
+                Console.WriteLine("No rentals available to return.");
+                return;
+            }
+            rentalService.DisplayYetToReturn();
+            int rentalId = InputHelper.GetIntInput("Enter rental ID: ");
+            rentalService.ReturnVideo(rentalId);
+        }
+
+        static void AddUser()
+        {
+            string username = InputHelper.GetStringInput("Enter username: ");
+            string password = InputHelper.GetStringInput("Enter password: ");
+            string role;
+            do
+            {
+                role = InputHelper.GetStringInput("Enter role (Admin/Customer): ");
+                if (role != "Admin" && role != "Customer")
+                {
+                    Console.WriteLine("Invalid role. Please enter 'Admin' or 'Customer'.");
+                }
+            } while (role != "Admin" && role != "Customer");
+            DisplayCustomers();
+            string referenceID = InputHelper.GetStringInput("Enter reference ID: ");
+            User user = new User { Username = username, PasswordHash = password, Role = role, ReferenceID = referenceID };
+            userService.AddUser(user);
+            userService.LoadData();
+        }
+
+        static void RemoveUser()
+        {
+            userService.DisplayUsers();
+            int userId = InputHelper.GetIntInput("Enter user ID: ");
+            userService.RemoveUser(userId);
+        }
+
+        static void SearchUser()
+        {
+            string username = InputHelper.GetStringInput("Enter username: ");
+            userService.SearchUser(username);
+        }
+
+        static void UpdateUser()
+        {
+            userService.DisplayUsers();
+            int userId = InputHelper.GetIntInput("Enter user ID: ");
+            string username = InputHelper.GetStringInput("Enter new username: ");
+            string password = InputHelper.GetStringInput("Enter new password: ");
+            string role;
+            do
+            {
+                role = InputHelper.GetStringInput("Enter role (Admin/Customer): ");
+                if (role != "Admin" && role != "Customer")
+                {
+                    Console.WriteLine("Invalid role. Please enter 'Admin' or 'Customer'.");
+                }
+            } while (role != "Admin" && role != "Customer");
+            DisplayCustomers();
+            string referenceID = InputHelper.GetStringInput("Enter new reference ID: ");
+            userService.UpdateUser(userId, username, password, role, referenceID);
         }
     }
 }

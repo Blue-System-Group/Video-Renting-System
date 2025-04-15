@@ -88,5 +88,51 @@ namespace VideoRentingSystem.Services
             Random random = new Random();
             return random.Next(1000, 9999);
         }
+
+        public void DisplayYetToReturn()
+        {
+            _rentalTable.DisplayYetToReturn();
+        }
+
+        public void DisplayYetToReturn(int customerId)
+        {
+            _rentalTable.DisplayCustomerYetToReturn(customerId);
+        }
+
+        public int GetYetToReturnCount()
+        {
+            return _rentalTable.CountYetToReturn();
+        }
+
+        public int GetYetToReturnCount(int customerId)
+        {
+            return _rentalTable.CountYetToReturn(customerId);
+        }
+
+        public void ReturnVideo(int rentalId)
+        {
+            Rental rental = _rentalTable.GetRental(rentalId);
+
+            if (rental == null)
+            {
+                Console.WriteLine("Rental record not found.");
+                return;
+            }
+
+            // Update rental return date and set video as available
+            string returnQuery = "UPDATE Rentals SET ReturnDate = @ReturnDate WHERE RentalID = @RentalID; " +
+                                 "UPDATE Videos SET Availability = 1 WHERE VideoID = @VideoID;" +
+                                 "UPDATE Rentals SET Status = 'Returned' WHERE RentalID = @RentalID;";
+            _dataAccess.ExecuteQuery(returnQuery, cmd =>
+            {
+                cmd.Parameters.AddWithValue("@ReturnDate", DateTime.Now);
+                cmd.Parameters.AddWithValue("@RentalID", rentalId);
+                cmd.Parameters.AddWithValue("@VideoID", rental.VideoID);
+            });
+            _rentalTable.ReturnVideo(rentalId);
+            videoService.UpdateVideoAvailability(rental.VideoID, true);
+
+            Console.WriteLine("Video returned successfully!");
+        }
     }
 }
