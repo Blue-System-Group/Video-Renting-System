@@ -103,6 +103,39 @@ namespace VideoRentingSystem.Services
             }
         }
 
+        // method to search for a video in the BST.
+        public void SearchVideo(int videoId)
+        {
+            _videoTree.Search(videoId);
+        }
+
+        // method to update video details in the BST and database.
+        public void UpdateVideo(int videoId, string videoTitle, string videoGenre, DateTime releaseDate)
+        {
+            Video video = _videoTree.Search(videoId);
+            if (video != null)
+            {
+                video.Title = videoTitle;
+                video.Genre = videoGenre;
+                video.ReleaseDate = releaseDate;
+                _videoTree.Update(videoId, video);
+                // Update video record in the database
+                string query = "UPDATE Videos SET Title = @Title, Genre = @Genre, ReleaseDate = @ReleaseDate WHERE VideoID = @ID";
+                _dataAccess.ExecuteQuery(query, cmd =>
+                {
+                    cmd.Parameters.AddWithValue("@Title", video.Title);
+                    cmd.Parameters.AddWithValue("@Genre", video.Genre);
+                    cmd.Parameters.AddWithValue("@ReleaseDate", video.ReleaseDate);
+                    cmd.Parameters.AddWithValue("@ID", videoId);
+                });
+                Console.WriteLine("Video updated successfully!");
+            }
+            else
+            {
+                Console.WriteLine("Video with ID " + videoId + " not found.");
+            }
+        }
+
         public void DisplayVideos()
         {
             _videoTree.DisplayAllVideos();
