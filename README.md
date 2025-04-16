@@ -40,7 +40,7 @@ Unit tests included for the core data structures:
    ```bash
    git clone https://github.com/Blue-System-Group/Video-Renting-System.git
    cd Video-Renting-System
-
+### Need SQL database setup Before run
 ### ▶️ Run with Visual Studio
 
 1. Open the `.sln` file in Visual Studio.
