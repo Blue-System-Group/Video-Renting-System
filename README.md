@@ -40,3 +40,12 @@ Unit tests included for the core data structures:
    ```bash
    git clone https://github.com/Blue-System-Group/Video-Renting-System.git
    cd Video-Renting-System
+
+### ▶️ Run with Visual Studio
+
+1. Open the `.sln` file in Visual Studio.
+2. Set `VideoRentalSystem` as the **Startup Project**.
+3. Press **F5** or click **Start** to run the console app.
+4. To run tests:
+   - Open **Test Explorer**
+   - Click **Run All Tests**
