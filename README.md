@@ -1,6 +1,6 @@
 # Video Rental System - Console App (.NET)
 
-This is a simple **Video Rental System** built as a **C# Console Application** using **.NET**.  
+This is a **Video Rental System** built as a **C# Console Application** using **.NET**.  
 The project demonstrates the use of **Data Structures** like Lists, Hash Tables, and Binary Search Trees, and includes a **database integration** for persistent data management.
 
 The solution also includes a **unit testing project** using **MSTest**, covering the main data structures used in the application.
