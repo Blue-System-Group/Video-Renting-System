@@ -1,51 +1,42 @@
-# Video Rental System - Console App
+# Video Rental System - Console Application
 
-This is a **Video Rental System** built as a **C# Console Application**.  
-The project demonstrates the use of **Data Structures** like Lists, Hash Tables, and Binary Search Trees, and includes a **database integration** for persistent data management.
+This is a **Video Rental System** developed as a **C# Console Application**.  
+The project showcases the use of custom **data structures** such as Lists, Hash Tables, and Binary Search Trees, with integrated **database support** for data persistence.
 
-The solution also includes a **unit testing project** using **MSTest**, covering the main data structures used in the application.
+A separate **unit testing project** is included using **MSTest**, focusing on validating the behavior of the main data structures.
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
 ### Main Project: `VideoRentalSystem`
 
 - **Language**: C#
-- **Framework**: .NET (Console Application)
-- **Database**: Integrated for storing customer, user, rental, and video data
-- **Data Structures Used**:
-  - `CustomerList` - Custom list implementation for managing customers
-  - `UserList` - Manages users of the system
-  - `RentalHashtable` - Hash table implementation for tracking rentals
-  - `VideoBST` - Binary Search Tree for efficient video catalog management
+- **Framework**: .NET (Console App)
+- **Database**: Used to store customer, user, rental, and video data
+- **Core Data Structures**:
+  - `CustomerList`: Custom list implementation for managing customers
+  - `UserList`: Handles system users
+  - `RentalHashtable`: Hash table for tracking rentals
+  - `VideoBST`: Binary Search Tree for efficient video catalog operations
 
 ---
 
-### Test Project: `VideoRentalSystem.Tests` (MSTest)
+### Test Project: `VideoRentalSystem.Tests`
 
-Unit tests included for the core data structures:
+Unit tests cover the main custom data structures:
 
-- ✅ `CustomerListTest`
-- ✅ `UserListTest`
-- ✅ `RentalHashtableTest`
-- ✅ `VideoBSTTest`
+- `CustomerListTest`
+- `UserListTest`
+- `RentalHashtableTest`
+- `VideoBSTTest`
 
 ---
 
-## 🚀 How to Run
+## Getting Started
 
-1. **Clone the repository**
+### 1. Clone the Repository
 
-   ```bash
-   git clone https://github.com/Blue-System-Group/Video-Renting-System.git
-   cd Video-Renting-System
-### Need SQL database setup Before run
-### ▶️ Run with Visual Studio
-
-1. Open the `.sln` file in Visual Studio.
-2. Set `VideoRentalSystem` as the **Startup Project**.
-3. Press **F5** or click **Start** to run the console app.
-4. To run tests:
-   - Open **Test Explorer**
-   - Click **Run All Tests**
+```bash
+git clone https://github.com/Blue-System-Group/Video-Renting-System.git
+cd Video-Renting-System
